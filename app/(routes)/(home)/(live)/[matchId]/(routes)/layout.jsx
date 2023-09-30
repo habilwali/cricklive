@@ -1,5 +1,4 @@
 
-"use client"
 
 import MatchDetailsRoutes from '@/components/match-routes'
 import { useQueries } from '@tanstack/react-query';
