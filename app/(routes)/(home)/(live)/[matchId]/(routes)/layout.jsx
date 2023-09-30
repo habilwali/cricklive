@@ -1,9 +1,8 @@
 
 
-import MatchDetailsRoutes from '@/components/match-routes'
-import { useQueries } from '@tanstack/react-query';
+
 import { Inter } from 'next/font/google'
-import MatchBoard from './components/match-info';
+
 
 
 

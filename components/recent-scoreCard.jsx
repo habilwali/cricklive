@@ -63,7 +63,7 @@ function RecentScoreCard({ data }) {
                             <div className="flex ">
                                 <div className=" flex justify-center items-center   flex-col">
                                     <div className=" bg-yellow-300 w-[47.48px] h-[47.48px] rounded-full flex justify-center items-center">
-                                    <Image src={`/${imageData[matches?.matchInfo?.team1?.teamId]}`} width={26} height={31} />
+                                    <Image src={`/${imageData[matches?.matchInfo?.team1?.teamId]}`} width={26} height={31} alt="img" />
                                     </div>
                                     <h1 className='lg:w-[100px] w-[80px] text-center lg:text-sm text-xs mt-3 '>{matches.matchInfo.team1.teamSName}</h1>
                                 </div>
@@ -82,7 +82,7 @@ function RecentScoreCard({ data }) {
                                 }
                                 <div className=" flex justify-center items-center   flex-col">
                                     <div className=" bg-yellow-300 w-[47.48px] h-[47.48px] rounded-full flex justify-center items-center">
-                                    <Image src={`/${imageData[matches?.matchInfo?.team2?.teamId]}`} width={26} height={31} />
+                                    <Image src={`/${imageData[matches?.matchInfo?.team2?.teamId]}`} width={26} height={31}  alt="img" />
                                     </div>
                                     <h1 className='lg:w-[100px] w-[80px] text-center lg:text-sm text-xs mt-3 '>{matches.matchInfo.team2.teamSName}</h1>
                                 </div>

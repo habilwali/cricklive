@@ -15,7 +15,7 @@ const TopStories = () => {
             </div>
             <div className="grid lg:grid-cols-2  rounded-md bg-white pb-5 mt-2 grid-cols-1 gap-2 border-0">
                 <div className=" rounded-lg p-3">
-                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="100%" height="347" />
+                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="100%" height="347" alt="img" />
                 </div>
                 <div className="flex flex-col  items-center  justify-center " >
                     <div className="mb-3" >
@@ -34,7 +34,7 @@ const TopStories = () => {
                 </div>
 
                 <div className=" flex p-2">
-                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" />
+                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px"  alt="img"/>
                     <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
                         <h1 className=" font-medium text-sm   ">
                             Babar azam hints that Naseem shah is out of ODI world cup squard.
@@ -45,7 +45,7 @@ const TopStories = () => {
                     </div>
                 </div>
                 <div className=" flex p-2">
-                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" />
+                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img"  />
                     <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
                         <h1 className=" font-medium text-sm   ">
                             Babar azam hints that Naseem shah is out of ODI world cup squard.
@@ -56,7 +56,7 @@ const TopStories = () => {
                     </div>
                 </div>
                 <div className=" flex p-2">
-                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" />
+                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img" />
                     <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
                         <h1 className=" font-medium text-sm   ">
                             Babar azam hints that Naseem shah is out of ODI world cup squard.
@@ -67,7 +67,7 @@ const TopStories = () => {
                     </div>
                 </div>
                 <div className=" flex p-2">
-                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" />
+                    <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img"  />
                     <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
                         <h1 className=" font-medium text-sm   ">
                             Babar azam hints that Naseem shah is out of ODI world cup squard.

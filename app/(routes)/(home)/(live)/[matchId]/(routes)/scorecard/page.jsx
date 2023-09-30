@@ -92,9 +92,9 @@ const ScoreCard = () => {
                         <div className="grid grid-cols-5 ">
                             <div className=" lg:col-span-3 col-span-5">
                                 {
-                                    playerScore?.data?.scorecard?.map((score) => (
+                                    playerScore?.data?.scorecard?.map((score, index) => (
 
-                                        <div className=" ">
+                                        <div className="" key={index}>
                                             {console.log("score", score)}
                                             <ScoreCardTable data={score} />
                                         </div>

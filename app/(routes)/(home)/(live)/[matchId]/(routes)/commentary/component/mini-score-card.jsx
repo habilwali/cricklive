@@ -12,8 +12,8 @@ export const MiniScoreCard = ({ data }) => {
 
       <Card className="mt-5 rounded-md p-2">
          
-      {data?.miniscore?.matchScoreDetails?.inningsScoreList?.map((score)=>(
-  <div className="flex justify-around w-[200px]">
+      {data?.miniscore?.matchScoreDetails?.inningsScoreList?.map((score, index)=>(
+  <div className="flex justify-around w-[200px]" key={index}>
   <h1 className="ms-3 ">{score?.batTeamName}</h1> 
  
   <h1>{score?.score}</h1>

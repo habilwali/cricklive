@@ -15,7 +15,7 @@ const MatchBoard = ({data}) => {
 
                         <div className="flex items-center  justify-center">
                             <div className=" bg-[#E5E5E5] w-[104.48px] h-[104.48px] rounded-full flex justify-center items-center">
-                                <Image src={`/${imageData[data?.data?.team1?.teamId]}`} width={48} height={86} />
+                                <Image src={`/${imageData[data?.data?.team1?.teamId]}`} width={48} height={86} alt="img" />
                             </div>
                             <h1 className='w-[100px] font-medium text-2xl text-white text-center ms-0'>{data?.data?.team1?.teamName}</h1>
                         </div>
@@ -30,7 +30,7 @@ const MatchBoard = ({data}) => {
                         <div className="flex items-center  justify-center">
                             <h1 className='w-[100px] font-medium text-2xl text-white text-center me-5'>{data?.data?.team2?.teamName}</h1>
                             <div className=" bg-[#E5E5E5] w-[104.48px] h-[104.48px] rounded-full flex justify-center items-center">
-                                <Image src={`/${imageData[data?.data?.team2?.teamId]}`} width={48} height={86} />
+                                <Image src={`/${imageData[data?.data?.team2?.teamId]}`} width={48} height={86} alt="img"  />
                             </div>
 
                         </div>

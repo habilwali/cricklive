@@ -19,8 +19,8 @@ const Matches = ({ data }) => {
                         <Button className="me-2 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button>
                     </div>
                     <div className="grid lg:grid-cols-2  rounded-md bg-white pb-0 mt-2 grid-cols-1 gap-2 sm:divide-y-0 divide-y-2 ">
-                        {matches.seriesMatches.matches.map((match) => (
-                            <div className="ps-5 pe-5 m-0 " >
+                        {matches.seriesMatches.matches.map((match, index) => (
+                            <div className="ps-5 pe-5 m-0 " key={index}>
                                 <CardHeader className=" m-0 pb-0 pt-2  flex flex-row justify-between relative ">
                                     <CardDescription className=" font-sans size-[14.68px] mt-2 font-medium ">{match.matchInfo.matchDesc} {match.matchInfo.seriesName} </CardDescription>
                                     <Star className="  top-1 right-0" />
@@ -29,7 +29,7 @@ const Matches = ({ data }) => {
                                     <div className="m-0 p-0">
                                         <div className="flex flex-row  items-center  p-0  ">
                                             <div className=" bg-[#E5E5E5] w-[47.48px] h-[47.48px] me-0 rounded-full flex justify-center items-center">
-                                                <Image src={`/${imageData[match?.matchInfo?.team1?.teamId]}`} width={26} height={31} />
+                                                <Image src={`/${imageData[match?.matchInfo?.team1?.teamId]}`} width={26} height={31} alt="img" />
                                             </div>
                                             <div className="mt-3 p-3   w-[130px] ">
                                                 <span>{match.matchInfo.team1.teamName}</span>
@@ -37,7 +37,7 @@ const Matches = ({ data }) => {
                                         </div>
                                         <div className="flex flex-row  items-center  p-0 ">
                                             <div className=" bg-[#E5E5E5] w-[47.48px] h-[47.48px] me-0 rounded-full flex justify-center items-center">
-                                            <Image src={`/${imageData[match?.matchInfo?.team2?.teamId]}`} width={26} height={31} />
+                                            <Image src={`/${imageData[match?.matchInfo?.team2?.teamId]}`} width={26} height={31}  alt="img" />
                                             </div>
                                             <div className="mt-3 p-3   w-[130px] ">
                                                 <span>{match.matchInfo.team2.teamName}</span>
