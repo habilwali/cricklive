@@ -50,7 +50,7 @@ function RecentScoreCard({ data }) {
             // dotListClass="custom-dot-list-style"
             >
                 {data?.map((matches, index) => (
-                    <Card onClick={() => handleClick(matches?.matchInfo?.matchId)} key={index} className={`lg:w-[440.84px]  lg:h-[192px] md:w-[340.84px]  w-[320.84px]  h-[192px] relative rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-blue-600 text-white' : null}`} >
+                    <Card onClick={() => handleClick(matches?.matchInfo?.matchId)} key={index} className={`lg:w-[440.84px]  lg:h-[192px] md:w-[340.84px]  w-auto  h-[192px] relative rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-blue-600 text-white' : null}`} >
                         {/* {
                             index === 1 &&
                             <Contifier />
@@ -63,7 +63,7 @@ function RecentScoreCard({ data }) {
                             <div className="flex ">
                                 <div className=" flex justify-center items-center   flex-col">
                                     <div className=" bg-yellow-300 w-[47.48px] h-[47.48px] rounded-full flex justify-center items-center">
-                                    <Image src={`/${imageData[matches?.matchInfo?.team1?.teamId]}`} width={26} height={31} alt="img" />
+                                    <Image src={`/${imageData[matches?.matchInfo?.team1?.teamId]}`} width={100} height={100} alt="img" />
                                     </div>
                                     <h1 className='lg:w-[100px] w-[80px] text-center lg:text-sm text-xs mt-3 '>{matches.matchInfo.team1.teamSName}</h1>
                                 </div>

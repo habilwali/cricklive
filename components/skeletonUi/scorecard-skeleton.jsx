@@ -2,11 +2,9 @@ import { Skeleton } from "../ui/skeleton";
 
 const ScorecardSkeleton = () => {
     return (
-        <div className="w-full h-full ">
-
+        <div className="w-full ">
             <div className="grid lg:grid-cols-3 gap-2 mt-3">
-         
-            <Skeleton className="lg:w-[440.84px] md:w-[340.84px]  w-[320.84px]  h-[192px] relative rounded-[12.23px] bg-white" >
+            <Skeleton className="lg:w-[440.84px] md:w-[340.84px]   w-auto  h-[192px] relative rounded-[12.23px] bg-white" >
                 <div className="flex flex-col  justify-center align-middle items-center absolute top-0 left-[50px] mt-2   ">
                   <Skeleton className="h-4 lg:w-[250px] w-[200px] mt-2" />
                 </div>
@@ -25,7 +23,7 @@ const ScorecardSkeleton = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col  justify-center align-middle items-center absolute top-0 bottom-0  right-8">
+                <div className="flex flex-col   justify-center align-middle items-center absolute top-0 bottom-0  right-8">
                   <div className="flex justify-between ">
                     <div className="flex justify-between">
                       <div className="flex  mt-5 flex-col items-center  lg:ms-4  me-2 " >
@@ -45,7 +43,7 @@ const ScorecardSkeleton = () => {
 
               </Skeleton>
               
-              <Skeleton className="lg:w-[440.84px] md:w-[340.84px]  w-[320.84px]  h-[192px] relative rounded-[12.23px] bg-white" >
+              <Skeleton className="lg:w-[440.84px] md:w-[340.84px] lg:visible invisible w-[320.84px]  h-[192px] relative rounded-[12.23px] bg-white" >
                 <div className="flex flex-col  justify-center align-middle items-center absolute top-0 left-[50px] mt-2   ">
                   <Skeleton className="h-4 lg:w-[250px] w-[200px] mt-2" />
                 </div>
@@ -83,7 +81,7 @@ const ScorecardSkeleton = () => {
                 </div>
 
               </Skeleton>
-              <Skeleton className="lg:w-[440.84px] md:w-[340.84px]  w-[320.84px]  h-[192px] relative rounded-[12.23px] bg-white" >
+              <Skeleton className="lg:w-[440.84px] md:w-[340.84px] lg:visible invisible  w-[320.84px]  h-[192px] relative rounded-[12.23px] bg-white" >
                 <div className="flex flex-col  justify-center align-middle items-center absolute top-0 left-[50px] mt-2   ">
                   <Skeleton className="h-4 lg:w-[250px] w-[200px] mt-2" />
                 </div>
@@ -118,7 +116,7 @@ const ScorecardSkeleton = () => {
                 </div>
                 <div className="flex flex-col  justify-center align-middle items-center absolute bottom-0 left-[50px] mb-3   ">
                   <Skeleton className="h-4 lg:w-[250px] w-[200px] mt-2" />
-                </div>
+                </div> 
 
               </Skeleton>
 

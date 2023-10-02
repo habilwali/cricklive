@@ -51,27 +51,25 @@ const ScoreCard = () => {
         }
     });
 
-    const { data: commentry, error: commentryError, isLoading: commentryLoading } = useQuery(['commentry', matchId], async () => {
-        try {
-            if (!matchId) {
-                throw new Error('Match ID is undefined.');
-            }
+    // const { data: commentry, error: commentryError, isLoading: commentryLoading } = useQuery(['commentry', matchId], async () => {
+    //     try {
+    //         if (!matchId) {
+    //             throw new Error('Match ID is undefined.');
+    //         }
 
-            const commentry = await  getCommentary(matchId);
-            console.log('commentry', commentry);
-            return commentry;
-        } catch (error) {
-            throw new Error(`Error fetching player score: ${error.message}`);
-        }
-    });
+    //         const commentry = await  getCommentary(matchId);
+    //         console.log('commentry', commentry);
+    //         return commentry;
+    //     } catch (error) {
+    //         throw new Error(`Error fetching player score: ${error.message}`);
+    //     }
+    // });
 
-    console.log("commentry2", commentry);
-
-    if (matchInfoLoading || playerScoreLoading || commentryError) {
+    if (matchInfoLoading || playerScoreLoading ) {
         return <div>Loading...</div>;
     }
 
-    if (matchInfoError || playerScoreError ) {
+    if (matchInfoError || playerScoreError  ) {
         return <div>Error: {matchInfoError ? matchInfoError.message : playerScoreError.message}</div>;
     }
 
@@ -79,7 +77,7 @@ const ScoreCard = () => {
         <div>
 
             <MatchBoard data={matchInfo} />
-            <div className="container">
+            <div className="lg:container container-full">
 
                 <Tabs defaultValue="scorecard" >
                     <TabsList className="mt-5 flex items-center gap-3 bg-transparent">
@@ -114,9 +112,9 @@ const ScoreCard = () => {
                     </TabsContent>
 
                     
-                    <TabsContent value="commentary">
+                    {/* <TabsContent value="commentary">
                         <Commentary data={commentry}/>
-                    </TabsContent>
+                    </TabsContent> */}
                 </Tabs>
             </div>
         </div>

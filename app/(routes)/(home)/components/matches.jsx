@@ -29,7 +29,7 @@ const Matches = ({ data }) => {
                                     <div className="m-0 p-0">
                                         <div className="flex flex-row  items-center  p-0  ">
                                             <div className=" bg-[#E5E5E5] w-[47.48px] h-[47.48px] me-0 rounded-full flex justify-center items-center">
-                                                <Image src={`/${imageData[match?.matchInfo?.team1?.teamId]}`} width={26} height={31} alt="img" />
+                                                <Image src={`/${imageData[match?.matchInfo?.team1?.teamId]}`} width={100} height={100} alt="img" />
                                             </div>
                                             <div className="mt-3 p-3   w-[130px] ">
                                                 <span>{match.matchInfo.team1.teamName}</span>
@@ -37,7 +37,7 @@ const Matches = ({ data }) => {
                                         </div>
                                         <div className="flex flex-row  items-center  p-0 ">
                                             <div className=" bg-[#E5E5E5] w-[47.48px] h-[47.48px] me-0 rounded-full flex justify-center items-center">
-                                            <Image src={`/${imageData[match?.matchInfo?.team2?.teamId]}`} width={26} height={31}  alt="img" />
+                                            <Image src={`/${imageData[match?.matchInfo?.team2?.teamId]}`} width={100} height={100}  alt="img" />
                                             </div>
                                             <div className="mt-3 p-3   w-[130px] ">
                                                 <span>{match.matchInfo.team2.teamName}</span>
