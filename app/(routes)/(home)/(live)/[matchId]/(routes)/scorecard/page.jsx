@@ -56,7 +56,7 @@ const ScoreCard = () => {
             if (!matchId) {
                 throw new Error('Match ID is undefined.');
             }
-            const commentry = await  getCommentary(80411);
+            const commentry = await  getCommentary(matchId);
             return commentry;    
         }
         catch (error) {
