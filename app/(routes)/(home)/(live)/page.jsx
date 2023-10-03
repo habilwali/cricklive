@@ -31,7 +31,7 @@ export default function Home() {
         ...prevData,
         newData: response?.data
       }));
-      console.log(response.data);
+    
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -42,7 +42,7 @@ export default function Home() {
     const interval = setInterval(fetchData, 1000000); // Fetch data every 20 seconds
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
-  console.log("hajfhajkf", data);
+
 
 
   

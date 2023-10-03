@@ -35,7 +35,7 @@ function ScoreCard({ data }) {
     const router = useRouter();
     const handleClick = (matchId) => {
         router.push(`/${matchId}/scorecard`);
-        console.log();
+    
     };
     return (
         <div className="mt-5">

@@ -34,7 +34,7 @@ function RecentScoreCard({ data }) {
     const handleClick = (matchId) => {
         router.push(`/${matchId}/scorecard`);
         
-        console.log();
+   
     };
     return (
         <div className="mt-5">

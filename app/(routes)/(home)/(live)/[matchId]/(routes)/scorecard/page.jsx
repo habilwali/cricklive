@@ -44,26 +44,30 @@ const ScoreCard = () => {
             }
 
             const playerScore = await getPlayerScore(matchId);
-            console.log('query', playerScore);
+         
             return playerScore;
         } catch (error) {
             throw new Error(`Error fetching player score: ${error.message}`);
         }
     });
 
-    // const { data: commentry, error: commentryError, isLoading: commentryLoading } = useQuery(['commentry', matchId], async () => {
-    //     try {
-    //         if (!matchId) {
-    //             throw new Error('Match ID is undefined.');
-    //         }
-
-    //         const commentry = await  getCommentary(matchId);
-    //         console.log('commentry', commentry);
-    //         return commentry;
-    //     } catch (error) {
-    //         throw new Error(`Error fetching player score: ${error.message}`);
-    //     }
-    // });
+    const { data: commentry, error: commentryError, isLoading: commentryLoading } = useQuery(['commentry', matchId], async () => {
+        try {
+            if (!matchId) {
+                throw new Error('Match ID is undefined.');
+            }
+            const commentry = await  getCommentary(80411);
+            return commentry;    
+        }
+        catch (error) {
+            throw new Error(`Error fetching player score: ${error.message}`);
+        }
+    },
+    
+    {
+        refetchInterval: 6000
+      }
+      );
 
     if (matchInfoLoading || playerScoreLoading ) {
         return <div>Loading...</div>;
@@ -93,7 +97,7 @@ const ScoreCard = () => {
                                     playerScore?.data?.scorecard?.map((score, index) => (
 
                                         <div className="" key={index}>
-                                            {console.log("score", score)}
+                                       
                                             <ScoreCardTable data={score} />
                                         </div>
 
@@ -112,9 +116,9 @@ const ScoreCard = () => {
                     </TabsContent>
 
                     
-                    {/* <TabsContent value="commentary">
+                    <TabsContent value="commentary">
                         <Commentary data={commentry}/>
-                    </TabsContent> */}
+                    </TabsContent>
                 </Tabs>
             </div>
         </div>

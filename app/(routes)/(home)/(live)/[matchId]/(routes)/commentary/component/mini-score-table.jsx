@@ -24,23 +24,27 @@ export function MiniScoreTable({data}) {
       </TableRow>
     </TableHeader>
     <TableBody>
-   
+    {data?.batsmanStriker?.batName ? (
         <TableRow >
-          <TableCell className="font-medium w-[200px]">{data?.batsmanStriker?.batName}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanStriker?.batRuns}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanStriker?.batBalls}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanStriker?.batFours}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanStriker?.batSixes}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanStriker?.batStrikeRate}</TableCell>
-        </TableRow>
-        <TableRow >
-          <TableCell className="font-medium w-[200px]">{data?.batsmanNonStriker?.batName}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanNonStriker?.batRuns}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanNonStriker?.batBalls}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanNonStriker?.batFours}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanNonStriker?.batSixes}</TableCell>
-          <TableCell className="font-medium ">{data?.batsmanNonStriker?.batStrikeRate}</TableCell>
-        </TableRow>
+        <TableCell className="font-medium w-[200px]">{data?.batsmanStriker?.batName} *</TableCell>
+        <TableCell className="font-medium ">{data?.batsmanStriker?.batRuns}</TableCell>
+        <TableCell className="font-medium ">{data?.batsmanStriker?.batBalls}</TableCell>
+        <TableCell className="font-medium ">{data?.batsmanStriker?.batFours}</TableCell>
+        <TableCell className="font-medium ">{data?.batsmanStriker?.batSixes}</TableCell>
+        <TableCell className="font-medium ">{data?.batsmanStriker?.batStrikeRate}</TableCell>
+      </TableRow>
+    ) : (null) }
+      {data?.batsmanNonStriker?.batName ? (
+           <TableRow >
+           <TableCell className="font-medium w-[200px]">{data?.batsmanNonStriker?.batName}</TableCell>
+           <TableCell className="font-medium ">{data?.batsmanNonStriker?.batRuns}</TableCell>
+           <TableCell className="font-medium ">{data?.batsmanNonStriker?.batBalls}</TableCell>
+           <TableCell className="font-medium ">{data?.batsmanNonStriker?.batFours}</TableCell>
+           <TableCell className="font-medium ">{data?.batsmanNonStriker?.batSixes}</TableCell>
+           <TableCell className="font-medium ">{data?.batsmanNonStriker?.batStrikeRate}</TableCell>
+         </TableRow>
+      ) :(null)}
+     
     </TableBody>
   </Table>
   )

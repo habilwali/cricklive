@@ -9,7 +9,7 @@ export const revalidate = 0;
 const Finished = async() => {
 
     const data = await getRecent({ matchType: "International" });
-    console.log(data.data.filteredData);
+  
     
     return ( 
         <div className="container  px-6  ">
