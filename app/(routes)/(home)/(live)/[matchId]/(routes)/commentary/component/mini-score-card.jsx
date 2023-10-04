@@ -26,8 +26,8 @@ export const MiniScoreCard = ({ data }) => {
             <div className="flex flex-col gap-2 p-2"> 
               <span>Partnership: {data?.miniscore?.partnerShip?.runs} ({data?.miniscore?.partnerShip?.balls})</span>
               <span>Last Wicket: {data?.miniscore?.lastWicket}</span>
-              {data?.miniscore?.latestPerformance?.map((latestPerformance) => (
-                <span>{latestPerformance.label}: {latestPerformance.runs}, {latestPerformance.wkts} wkts</span>
+              {data?.miniscore?.latestPerformance?.map((latestPerformance,index) => (
+                <span key={index}>{latestPerformance.label}: {latestPerformance.runs}, {latestPerformance.wkts} wkts</span>
               ))}
               
               <span>Toss: {data?.matchHeader?.tossResults?.tossWinnerName} ({data.matchHeader?.tossResults?.decision})</span>
