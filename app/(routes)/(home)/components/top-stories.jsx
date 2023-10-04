@@ -23,7 +23,7 @@ const TopStories = ({ data }) => {
             </div>
             {
                 data?.map((topstories, index) => (
-                    <div className="grid lg:grid-cols-2  rounded-md bg-white pb-5 mt-2 grid-cols-1 gap-2 border-0">
+                    <div key={index} className="grid lg:grid-cols-2  rounded-md bg-white pb-5 mt-2 grid-cols-1 gap-2 border-0">
                         <div className=" rounded-lg p-3">
                             <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topstories?.imageData}`} width={460} height={347} alt="img" />
                         </div>
