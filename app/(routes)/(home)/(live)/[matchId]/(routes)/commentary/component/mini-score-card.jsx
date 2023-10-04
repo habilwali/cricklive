@@ -30,7 +30,7 @@ export const MiniScoreCard = ({ data }) => {
                 <span key={index}>{latestPerformance.label}: {latestPerformance.runs}, {latestPerformance.wkts} wkts</span>
               ))}
               
-              <span>Toss: {data?.matchHeader?.tossResults?.tossWinnerName} ({data.matchHeader?.tossResults?.decision})</span>
+              <span>Toss: {data?.matchHeader?.tossResults?.tossWinnerName} ({data?.matchHeader?.tossResults?.decision})</span>
             </div>
           </div>
         </div>

@@ -15,6 +15,8 @@ import ScorecardSkeleton from "@/components/skeletonUi/scorecard-skeleton";
 import OngoingSeries from "../components/ongoing-series";
 import { getImagesData } from "@/lib/localdata";
 import FilterButtons from "@/components/filter";
+import getTopStories from "@/actions/get-top-stories";
+import { useQuery } from "@tanstack/react-query";
 
 export default function Home() {
 
@@ -42,6 +44,19 @@ export default function Home() {
     const interval = setInterval(fetchData, 1000000); // Fetch data every 20 seconds
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
+
+  
+  const { data: topStories, error: topStoriesError, isLoading: topStoriesLoading } = useQuery(['topStories'], async () => {
+    try {
+      
+
+        const topStories = await getTopStories();
+
+        return topStories;
+    } catch (error) {
+        throw new Error(`Error fetching player score: ${error.message}`);
+    }
+});
 
 
 
@@ -73,7 +88,7 @@ export default function Home() {
                 {/* <Matches /> */}
               </TabsContent>
               <OngoingSeries />
-              <TopStories />
+              <TopStories data={topStories}/>
               {/* <FeatureVideos /> */}
             </div>
             <div className="">

@@ -1,52 +1,99 @@
-"use client"
+"use client";
 
-import { useParams, usePathname } from "next/navigation";
-import { Button } from "./ui/button";
+import { useState } from "react";
 import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const MatchDetailsRoutes = () => {
-    const pathname = usePathname();
-    const params = useParams();
-    const routes = [
-        {
-            href: `/${params.matchId}/scorecard`,
-            label: 'Scorescard',
-            active: pathname === `/${params.matchId}/scorecard`,
-        },
-        {
-            href: `/${params.matchId}/squads`,
-            label: 'Squads',
-            active: pathname === `/${params.matchId}/squads`,
-        },
-        {
-            href: `/${params.matchId}/commentry`,
-            label: 'Commentry',
-            active: pathname === `/${params.matchId}/commentry`,
-        },
-       
+export function MainNav({ className, ...props }) {
+  const pathname = usePathname();
+  const params = useParams();
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const routes = [
+    {
+      href: `/`,
+      label: 'Home',
+      active: pathname === `/`,
+    },
+    {
+      href: `/news`,
+      label: 'News',
+      active: pathname === `/news`,
+    },
+    {
+      href: `/videos`,
+      label: 'Videos',
+      active: pathname === `/videos`,
+    },
+    {
+      href: `/offers`,
+      label: 'Offers',
+      active: pathname === `/offers`,
+    },
+    {
+      href: `/competition`,
+      label: 'Competition',
+      active: pathname === `/competition`,
+    },
+  ];
 
-    ]
-    return (
-        <div className=" flex justify-center space-x-2  mt-5 items-center">
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-            {routes.map((route) => (
-                <Link key={route.href}
-                        href={route.href}>
-                <Button className={cn(
-                    'text-sm font-medium transition-colors hover:text-white',
-                    route.active ? 'bg-[#FF6621] ' : 'bg-[#FFFFFF] text-black '
-                )}>
-                    
-                        {route.label}
-                   
-                </Button>
-                </Link>
-            ))}
-        </div>
-    );
+  return (
+    <div className="p-4 md:p-0">
+      <div className="flex items-center justify-between">
+        <button
+          onClick={handleToggleMenu}
+          className="block md:hidden text-white focus:outline-none"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            )}
+          </svg>
+        </button>
+        <nav
+          className={cn(
+            "md:flex md:items-center md:justify-start",
+            menuOpen ? "block" : "hidden"
+          )}
+          {...props}
+        >
+          {routes.map((route) => (
+            <Link
+              key={route.href}
+              href={route.href}
+              className={cn(
+                'block mt-4 text-sm font-medium transition-colors hover:text-primary',
+                route.active ? 'text-black dark:text-white' : 'text-white'
+              )}
+            >
+              {route.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </div>
+  );
 }
-
-
-export default MatchDetailsRoutes;

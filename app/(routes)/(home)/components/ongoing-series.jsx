@@ -10,7 +10,7 @@ const OngoingSeries = () => {
                 <span className="ms-1 pt-3 text-sm font-medium">
                     Ongoing Series 
                 </span>
-                <Button className="me-0 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button>
+                {/* <Button className="me-0 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button> */}
             </div>
 
          

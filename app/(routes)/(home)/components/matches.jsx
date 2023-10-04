@@ -16,7 +16,7 @@ const Matches = ({ data }) => {
                         <span className="ms-1 pt-3 text-sm font-medium">
                             {matches.seriesMatches.seriesName}
                         </span>
-                        <Button className="me-2 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button>
+                        {/* <Button className="me-2 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button> */}
                     </div>
                     <div className="grid lg:grid-cols-2  rounded-md bg-white pb-0 mt-2 grid-cols-1 gap-2 sm:divide-y-0 divide-y-2 ">
                         {matches.seriesMatches.matches.map((match, index) => (
