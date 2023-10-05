@@ -17,6 +17,8 @@ import { getImagesData } from "@/lib/localdata";
 import FilterButtons from "@/components/filter";
 import getTopStories from "@/actions/get-top-stories";
 import { useQuery } from "@tanstack/react-query";
+import getUpcoming from "@/actions/get-upcoming";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -60,7 +62,20 @@ export default function Home() {
 
 
 
-  
+const { data: onGoingSeries, error: onGoingSeriesError, isLoading: onGoingSeriesLoading } = useQuery(['onGoingSeries'], async () => {
+  try {
+    
+
+      const onGoingSeries = await getUpcoming({ matchType: "International" });
+
+      return onGoingSeries;
+  } catch (error) {
+      throw new Error(`Error fetching player score: ${error.message}`);
+  }
+});
+
+
+console.log("onGoingSeries >>>", onGoingSeries);
 
   
 
@@ -87,14 +102,14 @@ export default function Home() {
               <TabsContent value="international" >
                 {/* <Matches /> */}
               </TabsContent>
-              <OngoingSeries />
+              <OngoingSeries  data={onGoingSeries}/>
               <TopStories data={topStories}/>
               {/* <FeatureVideos /> */}
             </div>
             <div className="">
               <AddsPromotion />
-              <AddsPromotion />
-              <AddsPromotion />
+              <Image  className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="192" />
+              
             </div>
           </div>
           <TabsContent value="password">Change your password here.</TabsContent>

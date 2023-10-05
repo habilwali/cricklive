@@ -24,10 +24,10 @@ export const ScoreCardTable = ({ data }) => {
             <span >Total  {data?.score}-{data?.wickets}({data?.overs})</span>
           </div>
           <Separator />
-          <div className="p-3 flex flex-col">
+          {/* <div className="p-3 flex flex-col">
             <span>Did not bat</span>
             <span >shaheen, naseem</span>
-          </div>
+          </div> */}
           <DataTable columns={bollingcolumns} data={data?.bowler} />
         </CardContent>
       </Card>

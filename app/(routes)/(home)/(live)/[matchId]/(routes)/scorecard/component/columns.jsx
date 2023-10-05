@@ -53,7 +53,7 @@ export const scorecolumns = [
 export const bollingcolumns = [
   {
     accessorKey: "name",
-    header: "Bollers",
+    header: "Bowler",
   },
   {
     accessorKey: "overs",

@@ -7,40 +7,34 @@ import LiveCommentary from "./live-commentary";
 import MiniScore from "./mini-score";
 
 export const MiniScoreCard = ({ data }) => {
- 
-
   return (
     <>
-
       <Card className="mt-5 rounded-md p-2">
         <MiniScore data={data} />
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 gap-4">
           <div className=" col-span-2">
           <MiniScoreTable data={data?.miniscore} />
          <MiniBowlerTable data={data?.miniscore} />
           </div>
           <div className=" border-[#E5E5E5] ">
-            <div className=" bg-[#E5E5E5] p-3" >
+            <div className=" bg-[#E5E5E5] p-3 " >
                <h1>Key Stats</h1>
             </div>
             <div className="flex flex-col gap-2 p-2"> 
-              <span>Partnership: {data?.miniscore?.partnerShip?.runs} ({data?.miniscore?.partnerShip?.balls})</span>
-              <span>Last Wicket: {data?.miniscore?.lastWicket}</span>
+              <span><span className=" font-bold">Partnership:</span> {data?.miniscore?.partnerShip?.runs} ({data?.miniscore?.partnerShip?.balls})</span>
+              <span><span className=" font-bold">Last Wicket:</span> {data?.miniscore?.lastWicket}</span>
               {data?.miniscore?.latestPerformance?.map((latestPerformance,index) => (
-                <span key={index}>{latestPerformance.label}: {latestPerformance.runs}, {latestPerformance.wkts} wkts</span>
+                <span key={index}> <span className=" font-bold">{latestPerformance.label}:</span> {latestPerformance.runs}, {latestPerformance.wkts} wkts</span>
               ))}
-              
-              <span>Toss: {data?.matchHeader?.tossResults?.tossWinnerName} ({data?.matchHeader?.tossResults?.decision})</span>
+              <span > <span className=" font-bold">Toss:</span>  {data?.matchHeader?.tossResults?.tossWinnerName} ({data?.matchHeader?.tossResults?.decision})</span>
             </div>
           </div>
         </div>
         <div className="pt-5 pb-3">
-          <span className="">Recent: {data?.miniscore?.recentOvsStats}</span>
+          <span className=""><span className=" font-bold">Recent:</span> {data?.miniscore?.recentOvsStats}</span>
         </div>
         <Separator />
         <LiveCommentary data={data} />
-
-
       </Card>
 
 

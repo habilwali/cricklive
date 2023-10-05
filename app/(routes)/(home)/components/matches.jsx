@@ -45,7 +45,7 @@ const Matches = ({ data }) => {
                                         </div>
                                     </div>
                                     <div className=" flex flex-col  justify-center items-center  border-solid  border-s-2 ps-2">
-                                        <span className=" text-start lg:truncate lg:w-[280px]">
+                                        <span className=" text-start lg:truncate lg:w-[280px] text-[#911414]">
                                             {match.matchInfo.status}
                                             {/* {format(new Date(Number(match?.matchInfo?.startDate)), "MMM d, yyyy, hh:mm a")} */}
                                         </span>

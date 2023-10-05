@@ -11,7 +11,9 @@ export function LGNav({
   ...props
 }) {
   return (
-    <div className=" p-0">
+    <div className=" p-0 ">
+
+ 
     <nav
       className={cn("flex lg:flex-row sm:flex-col items-center space-x-4 lg:space-x-6", className)}
       {...props}
@@ -22,7 +24,7 @@ export function LGNav({
           href={route.href}
           className={cn(
             'text-sm font-medium transition-colors hover:text-primary',
-            route.active ? 'text-black dark:text-white' : ' text-white'
+            route.active ? 'font-extrabold text-md text-white dark:text-white' : ' text-white'
           )}
         >
           {route.label}

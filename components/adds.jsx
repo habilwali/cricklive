@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const AddsPromotion = () => {
     return ( 
         <div>
@@ -9,21 +12,24 @@ const AddsPromotion = () => {
             </div>
             <div className="rounded-md bg-white pb-0 mt-5  gap-1 border-0 p-3 ">
            <div className="flex justify-between flex-col gap-y-5  p-3">
-                  <div className="flex gap-3 items-center ">
-                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png" width="30px" height="30px" alt="img" />
+                  <div >
+                    <Link href="https://www.facebook.com/sportsbizzofficial " className="flex gap-3 items-center " >
+                  
+                   <Image  className="rounded-md" src="/images/Facebook.svg" alt="me" width="33" height="33" />
                     <span>Facebook</span>
+                    </Link>
                   </div>
-                  <div className="flex gap-3 items-center ">
-                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png" width="30px" height="30px" alt="img" />
-                    <span>Facebook</span>
+                  <div >
+                  <Link href="https://www.instagram.com/sportsbizz_/ " className="flex gap-3 items-center " >
+                   <Image  className="rounded-md" src="/images/Instagram.svg" alt="me" width="33" height="33" />
+                    <span>Instagram</span>
+                    </Link>
                   </div>
-                  <div className="flex gap-3 items-center">
-                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png" width="30px" height="30px" alt="img" />
-                    <span>Facebook</span>
-                  </div>
-                  <div className="flex gap-3 items-center">
-                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png" width="30px" height="30px" alt="img" />
-                    <span>Facebook</span>
+                  <div >
+                  <Link href=" https://twitter.com/sportsbizz_ " className="flex gap-3 items-center " >
+                  <Image  className="rounded-md" src="/images/X.svg" alt="me" width="33" height="33" />                     
+                    <span>X</span>
+                    </Link>
                   </div>
                   
                 </div>

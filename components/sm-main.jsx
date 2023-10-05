@@ -27,7 +27,7 @@ export function SMNAV({
           href={route.href}
           className={cn(
             'text-sm font-medium transition-colors hover:text-primary',
-            route.active ? 'text-black dark:text-white' : ' text-white'
+            route.active ? ' font-extrabold text-md text-white dark:text-white' : ' text-white'
           )}
         >
           {route.label}

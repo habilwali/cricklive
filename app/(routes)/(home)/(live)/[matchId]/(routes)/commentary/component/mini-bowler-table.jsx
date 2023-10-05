@@ -26,7 +26,7 @@ export function MiniBowlerTable({data}) {
       <TableBody>
      
           <TableRow >
-            <TableCell className="font-medium w-[200px]">{data?.bowlerStriker?.bowlName} *</TableCell>
+            <TableCell className="font-medium w-[200px]">{data?.bowlerStriker?.bowlName} <span className="text-[#911414]">*</span></TableCell>
             <TableCell className="font-medium ">{data?.bowlerStriker?.bowlOvs}</TableCell>
             <TableCell className="font-medium ">{data?.bowlerStriker?.bowlMaidens}</TableCell>
             <TableCell className="font-medium ">{data?.bowlerStriker?.bowlRuns}</TableCell>
