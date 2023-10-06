@@ -5,7 +5,6 @@ import { Separator } from "../../../../components/ui/separator";
 
 const OngoingSeries = ({data}) => {
 
-console.log("OngoingSeries", data);
     return (
         <div className="mt-2">
             <div className="flex justify-between">

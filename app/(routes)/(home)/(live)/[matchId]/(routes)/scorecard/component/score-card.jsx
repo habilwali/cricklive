@@ -28,7 +28,7 @@ export const ScoreCardTable = ({ data }) => {
             <span>Did not bat</span>
             <span >shaheen, naseem</span>
           </div> */}
-          <DataTable columns={bollingcolumns} data={data?.bowler} />
+          <DataTable columns={bollingcolumns}  data={data?.bowler} />
         </CardContent>
       </Card>
 

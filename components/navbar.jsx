@@ -24,9 +24,9 @@ const Navbar = () => {
       active: pathname === `/`,
     },
     {
-      href: ``,
+      href: `/news`,
       label: 'News',
-      active: pathname === ``,
+      active: pathname === `/news`,
     },
     {
       href: ``,

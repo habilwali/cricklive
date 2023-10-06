@@ -23,7 +23,7 @@ export function LGNav({
           key={route.href}
           href={route.href}
           className={cn(
-            'text-sm font-medium transition-colors hover:text-primary',
+            'text-sm font-medium transition-colors hover:text-red-300',
             route.active ? 'font-extrabold text-md text-white dark:text-white' : ' text-white'
           )}
         >

@@ -10,7 +10,7 @@ const AddsPromotion = () => {
                 </span>
               
             </div>
-            <div className="rounded-md bg-white pb-0 mt-5  gap-1 border-0 p-3 ">
+            <div className="rounded-md bg-white pb-0 mt-3  gap-1 border-0 p-3 ">
            <div className="flex justify-between flex-col gap-y-5  p-3">
                   <div >
                     <Link href="https://www.facebook.com/sportsbizzofficial " className="flex gap-3 items-center " >

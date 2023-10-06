@@ -75,7 +75,7 @@ const { data: onGoingSeries, error: onGoingSeriesError, isLoading: onGoingSeries
 });
 
 
-console.log("onGoingSeries >>>", onGoingSeries);
+
 
   
 

@@ -7,12 +7,6 @@ import getTopStories from "@/actions/get-top-stories";
 import Image from "next/image";
 
 const TopStories = ({ data }) => {
-
-
-    // const data = await getTopStories();
-
-    console.log("top = >>>>  ", data);
-
     return (
         <div className="mt-2">
             <div className="flex justify-between">

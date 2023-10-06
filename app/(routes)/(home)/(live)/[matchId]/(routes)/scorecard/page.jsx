@@ -78,15 +78,18 @@ const ScoreCard = () => {
         return <div>Error: {matchInfoError ? matchInfoError.message : playerScoreError.message}</div>;
     }
 
+    console.log("playerScore",commentry);
+
     return (
         <div>
             <MatchBoard data={matchInfo} score={commentry}/>
             <div className="lg:container container-full">
-                <Tabs defaultValue="scorecard" >
+                <Tabs defaultValue="commentary" >
                     <TabsList className="mt-5 flex items-center gap-3 bg-transparent">
+                    <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="commentary">Commentary</TabsTrigger>
                         <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="scorecard">Scorecard</TabsTrigger>
                         <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="Squad">Squad</TabsTrigger>
-                        <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="commentary">Commentary</TabsTrigger>
+                        
                     </TabsList>
                     <TabsContent value="scorecard">
                         <div className="grid grid-cols-5 ">

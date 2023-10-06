@@ -1,31 +1,26 @@
 "use client"
 
-
 import { getImagesData } from "@/lib/localdata";
 import { format } from "date-fns";
-
 import Image from "next/image";
 
 const MatchBoard = ({ data, score }) => {
-    console.log("ssss >>>>", score?.miniscore?.matchScoreDetails);
     const imageData = getImagesData();
     return (
         <div className="w-auto h-[228px] bg-[#022FF8] flex  justify-center items-center">
             <div className="container ">
                 <div className="flex justify-between items-center ">
-
                     <div className="flex items-center lg:p-5  justify-around">
-                        <div className="flex justify-center  flex-col items-center" > 
+                        <div className="flex justify-center  flex-col items-center" >
                             <div className=" bg-[#E5E5E5] lg:w-[104.48px] lg:h-[104.48px] w-[45px] h-[45px] rounded-full flex justify-center items-center">
                                 <Image src={`/${imageData[data?.data?.team1?.teamId]}`} width={100} height={100} alt="img" />
-
                             </div>
                             <span className="text-white text-sm font-bold pt-2  text-center">{data?.data?.team1?.teamName}</span>
                         </div>
                         {score?.miniscore?.matchScoreDetails?.inningsScoreList.map((score, index) => (
                             data?.data?.team1?.teamSName === score?.batTeamName &&
-                            <div key={index}  className="flex  flex-col justify-center lg:ms-5 ms-3">
-                                <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/ {score?.wickets}</h1>
+                            <div key={index} className="flex  flex-col justify-center lg:ms-5 ms-1">
+                                <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/{score?.wickets}</h1>
                                 <span className='font-medium lg:text-md text-sm text-white text-center '>{score?.overs}</span>
                             </div>
                         ))}
@@ -38,8 +33,8 @@ const MatchBoard = ({ data, score }) => {
                     <div className="flex items-center lg:p-5 justify-center">
                         {score?.miniscore?.matchScoreDetails?.inningsScoreList.map((score, index) => (
                             data?.data?.team2?.teamSName === score?.batTeamName &&
-                            <div key={index}  className="flex  flex-col justify-center me-5">
-                                <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/ {score?.wickets}</h1>
+                            <div key={index} className="flex  flex-col justify-center lg:me-5 me-2">
+                                <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/{score?.wickets}</h1>
                                 <span className='font-medium lg:text-md text-sm text-white text-center '>{score?.overs}</span>
                             </div>
                         ))}
@@ -65,7 +60,6 @@ const MatchBoard = ({ data, score }) => {
                         <p className="text-sm ms-2"> {format(new Date(Number(data?.data?.startDate)), "dd/LL/yyyy hh:mm a")}</p>
                     </div>
                 </div>
-
             </div>
         </div>
     );
