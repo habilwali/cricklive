@@ -22,9 +22,9 @@ const MatchBoard = ({ data, score }) => {
                             </div>
                             <span className="text-white text-sm font-bold pt-2  text-center">{data?.data?.team1?.teamName}</span>
                         </div>
-                        {score?.miniscore?.matchScoreDetails?.inningsScoreList.map((score) => (
+                        {score?.miniscore?.matchScoreDetails?.inningsScoreList.map((score, index) => (
                             data?.data?.team1?.teamSName === score?.batTeamName &&
-                            <div className="flex  flex-col justify-center lg:ms-5 ms-3">
+                            <div key={index}  className="flex  flex-col justify-center lg:ms-5 ms-3">
                                 <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/ {score?.wickets}</h1>
                                 <span className='font-medium lg:text-md text-sm text-white text-center '>{score?.overs}</span>
                             </div>
@@ -36,9 +36,9 @@ const MatchBoard = ({ data, score }) => {
                         </span>
                     </div>
                     <div className="flex items-center lg:p-5 justify-center">
-                        {score?.miniscore?.matchScoreDetails?.inningsScoreList.map((score) => (
+                        {score?.miniscore?.matchScoreDetails?.inningsScoreList.map((score, index) => (
                             data?.data?.team2?.teamSName === score?.batTeamName &&
-                            <div className="flex  flex-col justify-center me-5">
+                            <div key={index}  className="flex  flex-col justify-center me-5">
                                 <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/ {score?.wickets}</h1>
                                 <span className='font-medium lg:text-md text-sm text-white text-center '>{score?.overs}</span>
                             </div>
