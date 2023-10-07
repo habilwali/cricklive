@@ -14,9 +14,7 @@ const Commentary = ({ data }) => {
                 </div>
                 <Image className="rounded-md" src="/images/sidebanner.webp" alt="me" width="460" height="702" />
             </div>
-
         </div>
-
     );
 }
 

@@ -12,7 +12,7 @@ const getRecent = async (query) => {
   });
   
 
-  const res = await fetch(url,{ cache: 'force-cache' });
+  const res = await fetch(url,{ next: { revalidate: 3600 } });
   return res.json();
 };
 
