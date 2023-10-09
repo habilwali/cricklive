@@ -25,6 +25,7 @@ const Navbar = () => {
       label: 'News',
       active: pathname === `/news`,
     },
+    
     {
       href: ``,
       label: 'Videos',

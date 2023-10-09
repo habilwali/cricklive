@@ -1,9 +1,6 @@
-
-
 "use client"
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Star } from "lucide-react";
@@ -55,7 +52,7 @@ function UpcomingScoreCard({ data }) {
             // dotListClass="custom-dot-list-style"
             >
                 {data?.map((matches, index) => (
-                    <Card onClick={() => handleClick(matches?.matchInfo?.matchId)} key={index} className={`lg:w-[440.84px] hover:cursor-pointer md:w-[340.84px] mt-0    w-auto h-[172px] relative rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-[#022FF8] text-white' : null}`} >
+                    <Card onClick={() => handleClick(matches?.matchInfo?.matchId)} key={index} className={`lg:w-[440.84px] font-[helvetica, "Segoe UI", Arial, sans-serif] hover:cursor-pointer md:w-[340.84px] mt-0    w-auto h-[172px] relative rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-[#022FF8] text-white' : null}`} >
                      <svg className="group88  absolute top-0 bottom-0 " width={442} height={192} viewBox="0 0 442 172" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse  className='lg:block hidden' cx="432.922" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />
                             <ellipse className='lg:hidden' cx="335.922" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />
@@ -80,10 +77,10 @@ function UpcomingScoreCard({ data }) {
                                 </div>
                             </div>
                             <div className=" flex flex-col  justify-center items-center gap-y-3 ">
-                                <span className="w-[100px] text-sm text-center">
+                                <span className="w-[100px] text-md text-center">
                                     Start Time
                                 </span>
-                                <span className='w-[100px] text-center text-xs '>
+                                <span className='w-[100px] text-center text-sm '>
                                     {format(new Date(Number(matches?.matchInfo?.startDate)), "dd/LL/yyyy hh:mm a")}
                                 </span>
                             </div>

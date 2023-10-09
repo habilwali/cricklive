@@ -16,7 +16,7 @@ const FilterButtons = () => {
         },
         {
             href: `/upcoming`,
-            label: 'upComing',
+            label: 'Upcoming',
             active: pathname === `/upcoming`,
         },
         {

@@ -55,7 +55,7 @@ function ScoreCard({ data }) {
                 {
                     data?.map((match, index) => (
                         <>
-                            <Card key={match?.matchInfo?.matchId} onClick={() => handleClick(match?.matchInfo?.matchId)} className={`lg:w-[440.84px]  lg:h-[192px] md:w-[340.84px]  w-auto  h-[182px] relative hover:cursor-pointer rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-[#022FF8] text-white' : null}`} >
+                            <Card key={match?.matchInfo?.matchId} onClick={() => handleClick(match?.matchInfo?.matchId)} className={`lg:w-[440.84px]  lg:h-[192px] md:w-[340.84px] font-[helvetica, "Segoe UI", Arial, sans-serif]   w-auto  h-[182px] relative hover:cursor-pointer rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-[#022FF8] text-white' : null}`} >
                             <svg className="group88  absolute top-0 bottom-0 " width={442} height={192} viewBox="0 0 442 172" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse  className='lg:block hidden' cx="432.922" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />
                             <ellipse className='lg:hidden' cx="335.922" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />
@@ -69,7 +69,7 @@ function ScoreCard({ data }) {
                             <Contifier />
                         } */}
                                 <CardHeader className=" m-0 pt-2 relative gap-2 ">
-                                    <CardDescription className={`text-center  lg:ms-[46px] font-sans size-[14.68px] font-medium lg:truncate lg:w-[280px] ${index % 2 === 0 ? '  bg-transparent text-white' : null}`}>{match?.matchInfo?.seriesName} </CardDescription>
+                                    <CardDescription className={`text-center  lg:ms-[46px]  size-[14.68px] font-medium lg:truncate lg:w-[280px] ${index % 2 === 0 ? '  bg-transparent text-white' : null}`}>{match?.matchInfo?.seriesName} </CardDescription>
                                     <Star className=" absolute top-0 right-3" />
                                 </CardHeader>
 
@@ -86,12 +86,12 @@ function ScoreCard({ data }) {
                                             match?.matchScore?.team1Score &&
                                             <div className="flex  mt-1 flex-col  lg:ms-4  ms-0  " >
                                                 <div>
-                                                    <span className=" font-sans text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs} / </span>
+                                                    <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs} / </span>
                                                 {
-                                                    match?.matchScore?.team1Score?.inngs1?.wickets ? (  <span className=" font-sans text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets}</span>) : (<span className=" font-sans text-sm font-medium">0</span>)
+                                                    match?.matchScore?.team1Score?.inngs1?.wickets ? (  <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets}</span>) : (<span className="  text-sm font-medium">0</span>)
                                                 }
                                                 </div>
-                                                <span className=" font-sans text-xs text-center font-normal">{match?.matchScore?.team1Score?.inngs1?.overs}</span>
+                                                <span className="  text-xs text-center font-normal">{match?.matchScore?.team1Score?.inngs1?.overs}</span>
                                             </div>
                                         }
 
@@ -100,9 +100,9 @@ function ScoreCard({ data }) {
                                         {
                                             match?.matchScore?.team2Score &&
                                             <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
-                                                <span className=" font-sans text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs}/
+                                                <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs}/
                                                 {match?.matchScore?.team2Score?.inngs1?.wickets}</span>
-                                                <span className=" font-sans text-xs text-center font-normal">{match?.matchScore?.team2Score?.inngs1?.overs}</span>
+                                                <span className="  text-xs text-center font-normal">{match?.matchScore?.team2Score?.inngs1?.overs}</span>
                                             </div>
                                         }
 

@@ -1,0 +1,57 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_14079_3411)">
+<mask id="mask0_14079_3411" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#012169"/>
+</mask>
+<g mask="url(#mask0_14079_3411)">
+<g clip-path="url(#clip1_14079_3411)">
+<g clip-path="url(#clip2_14079_3411)">
+<g clip-path="url(#clip3_14079_3411)">
+<g clip-path="url(#clip4_14079_3411)">
+<g clip-path="url(#clip5_14079_3411)">
+<g clip-path="url(#clip6_14079_3411)">
+<g clip-path="url(#clip7_14079_3411)">
+<g clip-path="url(#clip8_14079_3411)">
+<path d="M70 0H-10V59.7375H70V0Z" fill="black"/>
+<path d="M70 40.0874H-10V59.9999H70V40.0874Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-10 0H70V19.9125H-10V0Z" fill="#1791FF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_14079_3411">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+<clipPath id="clip1_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-15)"/>
+</clipPath>
+<clipPath id="clip2_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-15)"/>
+</clipPath>
+<clipPath id="clip3_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-15)"/>
+</clipPath>
+<clipPath id="clip4_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-15)"/>
+</clipPath>
+<clipPath id="clip5_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-4)"/>
+</clipPath>
+<clipPath id="clip6_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-10)"/>
+</clipPath>
+<clipPath id="clip7_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-10)"/>
+</clipPath>
+<clipPath id="clip8_14079_3411">
+<rect width="80" height="60" fill="white" transform="translate(-10)"/>
+</clipPath>
+</defs>
+</svg>

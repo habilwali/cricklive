@@ -6,7 +6,7 @@ const LiveCommentary = ({ data }) => {
           <span className="me-3 text-md font-bold">{commentary.overNumber}</span>
           <p className="text-sm">
             {commentary?.commText.replace(/\n/g, '<br />') // Replace \n with <br />
-            .split(/(B\d\$|I\d\$)/).map((part, index) => {
+            .split(/(B\d\$|I\d\$|\n\n)/).map((part, index) => {
               if (part === '\n') {
                 return <br key={index} />;
               } else if (/^B\d\$/.test(part)) {
