@@ -13,7 +13,7 @@ export default function Entertainment({data}) {
         <div className='bg-white  rounded-2xl grid  lg:grid-cols-3'>
             {
                data?.filter((_, index) => index !== 0).map((list, index)=>(
-                    <div onClick={() => handleClick(list?.id)} key={index} className=" rounded-lg p-3 ">
+                    <div onClick={() => handleClick(list?.id)} key={index} className=" rounded-lg p-3 cursor-pointer ">
                     <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${list?.imageData}`} width={460} height={347} alt="img" />
                     <div className="text-neutral-700 text-lg font-medium font-['Satoshi']">{list?.hline}</div>
                 </div>

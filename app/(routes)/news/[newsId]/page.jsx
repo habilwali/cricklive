@@ -48,8 +48,8 @@ export default function NewsDetail() {
 
         {
           topStoryDetail?.data?.content?.map((content, index) => (
-            <div  key={index} className='pt-5 w-[90%] ms-1 gap-4'>
-              <p className='mb-5  text-justify text-base font-normal font-[helvetica, "Segoe UI", Arial, sans-serif]  tracking-tight '>{content?.content?.contentValue?.replace(/@L0\$/, topStoryDetail?.data?.format[1].value[0])}</p>
+             <div  key={index} className='pt-5 w-[90%] ms-1 gap-4'>
+              <p className='mb-5  text-justify text-base font-normal font-[helvetica, "Segoe UI", Arial, sans-serif]  tracking-tight '>{content?.content?.contentValue}</p>
             </div>
 
           ))

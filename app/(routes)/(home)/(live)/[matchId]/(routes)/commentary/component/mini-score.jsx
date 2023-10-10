@@ -1,3 +1,5 @@
+import { convertToNextInteger } from "@/lib/utils";
+
 const MiniScore = ({data}) => {
     return ( 
         <div className="pt-3 ps-0 pb-3">
@@ -8,7 +10,7 @@ const MiniScore = ({data}) => {
               <span >{score?.score}</span>
               <span >/</span>
               <span >{score?.wickets}</span>
-              <span className="ms-1">({score?.overs})</span>
+              <span className="ms-1">({convertToNextInteger(score?.overs)})</span>
               {
                 data?.miniscore?.inningsId === score?.inningsId ? (
                   <span className={`  ms-1   text-sm text-[#911414] mt-2 `}> CRR: {data?.miniscore?.currentRunRate}</span>

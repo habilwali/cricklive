@@ -25,24 +25,44 @@ export default function Home() {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true)
   const imageData = getImagesData();
-  const fetchData = async () => {
-    try {
-      const response = await getLive({ matchType: 'International' });
-      setLoading(false)
-      setData(prevData => ({
-        ...prevData,
-        newData: response?.data
-      }));
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await getLive({ matchType: 'International' });
+  //     setLoading(false)
+  //     setData(prevData => ({
+  //       ...prevData,
+  //       newData: response?.data
+  //     }));
+  //   } catch (error) {
+  //     console.error('Error fetching data:', error);
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchData(); // Fetch initial data
-    const interval = setInterval(fetchData, 1000000); // Fetch data every 20 seconds
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+  // useEffect(() => {
+  //   fetchData(); // Fetch initial data
+  //   const interval = setInterval(fetchData, 1000000); // Fetch data every 20 seconds
+  //   return () => clearInterval(interval); // Cleanup interval on component unmount
+  // }, []);
+
+  
+  const { data: liveScore, error: liveScoreError, isLoading: liveScoreLoading } = useQuery(['liveScore'], async () => {
+    try {
+      const liveScore = await getLive({ matchType: 'International' });
+      return liveScore;
+    } catch (error) {
+      throw new Error(`Error fetching player score: ${error.message}`);
+    }
+  },
+//   {
+//     refetchInterval: 10000
+// }
+);
+
+  console.log("liveScore",liveScore?.data?.typeMatches);
+
+  if(liveScoreLoading){
+    <div>loading</div>
+  }
 
   const { data: topStories, error: topStoriesError, isLoading: topStoriesLoading } = useQuery(['topStories'], async () => {
     try {
@@ -72,11 +92,11 @@ export default function Home() {
             <TabsTrigger value="domestic" className=" rounded-none" >Domestic</TabsTrigger>
             <TabsTrigger value="women" className=" rounded-none" >Women</TabsTrigger>
           </TabsList> */}
-          {isLoading &&
+          {liveScoreLoading &&
             <ScorecardSkeleton />
           }
           {
-            data.newData ? (<ScoreCard data={data?.newData?.typeMatches} />) : (null)
+            liveScore ? (<ScoreCard data={liveScore?.data?.typeMatches} />) : (null)
           }
           <div className="grid lg:grid-cols-3 gap-4">
             <div className="col-span-2">

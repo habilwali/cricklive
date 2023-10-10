@@ -1,10 +1,12 @@
 "use client"
 
 import { getImagesData } from "@/lib/localdata";
+import { convertToNextInteger } from "@/lib/utils";
 import { format } from "date-fns";
 import Image from "next/image";
 
 const MatchBoard = ({ data, score }) => {
+    console.log("data info",data);
     const imageData = getImagesData();
     return (
         <div className="w-auto h-[228px] bg-[#022FF8] flex  justify-center items-center">
@@ -21,7 +23,7 @@ const MatchBoard = ({ data, score }) => {
                             data?.data?.team1?.teamSName === score?.batTeamName &&
                             <div key={index} className="flex  flex-col justify-center lg:ms-5 ms-1">
                                 <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/{score?.wickets}</h1>
-                                <span className='font-medium lg:text-md text-sm text-white text-center '>{score?.overs}</span>
+                                <span className='font-medium lg:text-md text-sm text-white text-center '>{convertToNextInteger(score?.overs)}</span>
                             </div>
                         ))}
                     </div>
@@ -35,7 +37,7 @@ const MatchBoard = ({ data, score }) => {
                             data?.data?.team2?.teamSName === score?.batTeamName &&
                             <div key={index} className="flex  flex-col justify-center lg:me-5 me-2">
                                 <h1 className='font-medium lg:text-2xl text-sm text-white text-center '>{score?.score}/{score?.wickets}</h1>
-                                <span className='font-medium lg:text-md text-sm text-white text-center '>{score?.overs}</span>
+                                <span className='font-medium lg:text-md text-sm text-white text-center '>{convertToNextInteger(score?.overs)}</span>
                             </div>
                         ))}
                         <div className="flex justify-center  flex-col items-center" >
@@ -53,7 +55,7 @@ const MatchBoard = ({ data, score }) => {
                     </div>
                     <div className="flex lg:justify-center">
                         <span className="text-md font-bold flex">Venue:</span>
-                        <p className="text-sm  truncate lg:w-[290px] w-[200px] ms-2"> {data?.data?.venueInfo.ground}, {data?.data?.venueInfo.city}, {data?.data?.venueInfo.country}</p>
+                        <p className="text-sm  truncate lg:w-[290px] w-[200px] ms-2"> {data?.data?.venueInfo?.ground}, {data?.data?.venueInfo?.city}, {data?.data?.venueInfo?.country}</p>
                     </div>
                     <div className="flex  lg:justify-end">
                         <span className="text-md font-bold text-end">Date & Time:  </span>
