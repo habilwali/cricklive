@@ -14,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import Commentary from "../commentary/page";
 import getCommentary from "@/actions/get-commentary";
 import MatchInfoSkeleton from "@/components/skeletonUi/match-info-skeleton";
+import ButtonSkeleton from "@/components/skeletonUi/button-skeleton";
+import CommentarySkeleton from "@/components/skeletonUi/commentarycardSkeleton";
 
 
 
@@ -70,8 +72,18 @@ const ScoreCard = () => {
         }
     );
 
-    if (matchInfoLoading || playerScoreLoading) {
-        return <MatchInfoSkeleton/>;
+   
+    if (matchInfoLoading || playerScoreLoading ) {
+        return(
+            
+           <div >
+              <MatchInfoSkeleton/>
+              <ButtonSkeleton/>
+              <CommentarySkeleton/>
+              </div>
+          
+
+        ) 
     }
 
     if (matchInfoError || playerScoreError) {

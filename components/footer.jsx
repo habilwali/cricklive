@@ -68,28 +68,33 @@ const Footer = () => {
           <div className="flex m-0 col-span-2 ">
             <div className="ms-2" >
               <Link href="https://www.facebook.com/sportsbizzofficial " className="flex gap-3 items-center " >
-                <Image className="rounded-md" src="/images/Facebook.svg" alt="me" width="33" height="33" />
+                <Image className="rounded-md" src="/logo/Facebook-2.svg" alt="me" width="60" height="60" />
               </Link>
             </div>
             <div className="ms-2" >
               <Link href="https://www.instagram.com/sportsbizz_/ " className="flex gap-3 items-center " >
-                <Image className="rounded-md" src="/images/Instagram.svg" alt="me" width="33" height="33" />
+                <Image className="rounded-md" src="logo/Instagram-2.svg" alt="me" width="60" height="60" />
               </Link>
             </div>
             <div className="ms-2" >
               <Link href=" https://twitter.com/sportsbizz_ " className="flex gap-3 items-center " >
-                <Image className="rounded-md" src="/images/X.svg" alt="me" width="33" height="33" />
+                <Image className="rounded-md" src="/logo/X-2.svg" alt="me" width="60" height="60" />
+              </Link>
+            </div>
+            <div className="ms-2" >
+              <Link href="https://www.youtube.com/channel/UCe3ROA7cvgieDp1wJGqD9LA" className="flex gap-3 items-center " >
+                <Image className="rounded-md" src="/logo/Youtube-2.svg" alt="me" width="60" height="60" />
               </Link>
             </div>
 
           </div>
 
-<div className="flex">
-  <span className="text-[#FFF] text-muted-foreground">
-  <Link href="">Terms of Use</Link> | <Link href="/about">About Us</Link> | <Link href="">Privacy Policy</Link> | <Link href="">Copyright 2023</Link>
-  </span>
- 
-</div>
+          <div className=" col-span-2 text-center">
+            <span className="text-[#FFF] text-muted-foreground w-100">
+              <Link href="">Terms of Use</Link> | <Link href="/about">About Us</Link> | <Link href="">Privacy Policy</Link> | <Link href="">Copyright 2023</Link>
+            </span>
+
+          </div>
 
 
 

@@ -8,8 +8,8 @@ const Commentary = ({ data }) => {
             <div className=" lg:col-span-2 col-span-3">
                 <MiniScoreCard data={data} />
             </div>
-            <div className=" col-span-1  rounded-md">
-                <div className="mb-3 w-100">
+            <div className=" lg:col-span-1  col-span-3  rounded-md">
+                <div className="mb-3 w-auto">
                     <AddsPromotion />
                 </div>
                 <Image className="rounded-md" src="/images/sidebanner.webp" alt="me" width="460" height="702" />

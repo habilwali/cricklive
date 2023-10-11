@@ -55,9 +55,9 @@ export default function NewsDetail() {
           ))
         }
 
-        <span className='text-xs text-muted-foreground'>
+        {/* <span className='text-xs text-muted-foreground'>
            by {topStoryDetail?.data?.authors?.map((authdata) => authdata?.name)}    
-        </span>
+        </span> */}
 
       </div>
 

@@ -1,6 +1,8 @@
-import { convertToNextInteger } from "@/lib/utils";
+import { addLineBreaks, convertToNextInteger } from "@/lib/utils";
 
 const LiveCommentary = ({ data }) => {
+
+
   return (
     <div className="flex flex-col ">
       {data?.commentaryList?.map((commentary, index) => (
@@ -49,7 +51,6 @@ const LiveCommentary = ({ data }) => {
                     {commentary?.overSeparator?.batNonStrikerRuns}({commentary?.overSeparator?.batNonStrikerBalls})
                   </span>
                 </div>
-
                 <div className="flex justify-between">
                   <span className="w-15">
                     {commentary?.overSeparator?.batStrikerNames} :
@@ -58,27 +59,22 @@ const LiveCommentary = ({ data }) => {
                     {commentary?.overSeparator?.batStrikerRuns}({commentary?.overSeparator?.batStrikerBalls})
                   </span>
                 </div>
-
               </div>
-
               |
-
               <div className="flex flex-col items-center">
-
                 <div className="flex flex-col items-center justify-between">
                   {
-                     commentary?.overSeparator?.bowlNames?.map((bolname, index)=>(
-                    <span key={index} className="w-15">
-                       {bolname} 
-                     </span>
-                     ))
-                     
+                    commentary?.overSeparator?.bowlNames?.map((bolname, index) => (
+                      <span key={index} className="w-15">
+                        {bolname}
+                      </span>
+                    ))
 
                   }
-               
+
                   <span>
                     {commentary?.overSeparator?.bowlOvers}-{commentary?.overSeparator?.bowlMaidens}-{commentary?.overSeparator?.bowlRuns}-{commentary?.overSeparator?.bowlWickets
-}
+                    }
                   </span>
                 </div>
 
@@ -88,12 +84,10 @@ const LiveCommentary = ({ data }) => {
 
           <div className="flex">
             <span className="me-3 text-md font-bold">{commentary.overNumber}</span>
-            <p className="text-sm">
-              {commentary?.commText.replace(/\n/g, '<br />') // Replace \n with <br />
-                .split(/(B\d\$|I\d\$|\n\n)/).map((part, index) => {
-                  if (part === '\n') {
-                    return <br key={index} />;
-                  } else if (/^B\d\$/.test(part)) {
+            {/* <p className="text-sm">
+              {   
+                commentary?.commText.split(/(B\d\$|I\d\$)/).map((part, index) => {
+                  if (/^B\d\$/.test(part)) {
                     const formatIndex = commentary.commentaryFormats.bold.formatId.indexOf(part);
                     return (
                       <strong key={index}>
@@ -107,14 +101,34 @@ const LiveCommentary = ({ data }) => {
                         {commentary.commentaryFormats.italic.formatValue[formatIndex]}
                       </em>
                     );
-                  }
-
-
-                  return part;
-                })}
+                  } 
+                  const value =addLineBreaks(part)
+                  return value;
+                })
+               }
+            </p> */}
+            <p className="text-sm">
+              {commentary?.commText.split(/(B\d\$|I\d\$)/).map((part, index) => {
+                if (/^B\d\$/.test(part)) {
+                  const formatIndex = commentary.commentaryFormats.bold.formatId.indexOf(part);
+                  return (
+                    <strong key={index}>
+                      {commentary.commentaryFormats.bold.formatValue[formatIndex]}
+                    </strong>
+                  );
+                } else if (/^I\d\$/.test(part)) {
+                  const formatIndex = commentary.commentaryFormats.italic.formatId.indexOf(part);
+                  return (
+                    <em key={index}>
+                      {commentary.commentaryFormats.italic.formatValue[formatIndex]}
+                    </em>
+                  );
+                }
+                const value = addLineBreaks(part);
+                return value;
+              })}
             </p>
           </div>
-
         </div>
       ))}
     </div>

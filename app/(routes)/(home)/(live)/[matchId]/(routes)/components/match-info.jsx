@@ -55,7 +55,7 @@ const MatchBoard = ({ data, score }) => {
                     </div>
                     <div className="flex lg:justify-center">
                         <span className="text-md font-bold flex">Venue:</span>
-                        <p className="text-sm  truncate lg:w-[290px] w-[200px] ms-2"> {data?.data?.venueInfo?.ground}, {data?.data?.venueInfo?.city}, {data?.data?.venueInfo?.country}</p>
+                        <p className="text-sm  truncate lg:w-[350px] w-[200px] ms-2"> {data?.data?.venueInfo?.ground}, {data?.data?.venueInfo?.city}, {data?.data?.venueInfo?.country}</p>
                     </div>
                     <div className="flex  lg:justify-end">
                         <span className="text-md font-bold text-end">Date & Time:  </span>

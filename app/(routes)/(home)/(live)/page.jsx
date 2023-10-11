@@ -99,7 +99,7 @@ export default function Home() {
             liveScore ? (<ScoreCard data={liveScore?.data?.typeMatches} />) : (null)
           }
           <div className="grid lg:grid-cols-3 gap-4">
-            <div className="col-span-2">
+            <div className="lg:col-span-2 col-span-3">
               <TabsContent value="international" >
                 {/* <Matches /> */}
               </TabsContent>
@@ -107,12 +107,12 @@ export default function Home() {
               <TopStories data={topStories} />
               {/* <FeatureVideos /> */}
             </div>
-            <div className="">
+            <div className="lg:col-span-1 col-span-3">
               <AddsPromotion />
               <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="192" />
             </div>
           </div>
-          <TabsContent value="password">Change your password here.</TabsContent>
+         
         </Tabs>
       </div>
       {/* <div className="container mt-3 w-100 h-100">
