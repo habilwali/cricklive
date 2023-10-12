@@ -73,7 +73,7 @@ const ScoreCard = () => {
     );
 
    
-    if (matchInfoLoading || playerScoreLoading ) {
+    if (matchInfoLoading || playerScoreLoading  ) {
         return(
             
            <div >
@@ -124,7 +124,7 @@ const ScoreCard = () => {
 
 
                     <TabsContent value="commentary">
-                        <Commentary data={commentry} />
+                       <Commentary data={commentry} />
                     </TabsContent>
                 </Tabs>
             </div>

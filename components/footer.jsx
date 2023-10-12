@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
             <div className="ms-2" >
               <Link href="https://www.instagram.com/sportsbizz_/ " className="flex gap-3 items-center " >
-                <Image className="rounded-md" src="logo/Instagram-2.svg" alt="me" width="60" height="60" />
+                <Image className="rounded-md" src="/logo/Instagram-2.svg" alt="me" width="60" height="60" />
               </Link>
             </div>
             <div className="ms-2" >

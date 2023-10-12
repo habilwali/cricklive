@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const AddsPromotion = () => {
     return ( 
-        <div>
+        <div className="dark:text-black">
              <div className="flex justify-between">
                 <span className="ms-1 pt-4 text-sm font-medium">
                     Follow us
@@ -31,6 +31,12 @@ const AddsPromotion = () => {
                     <span>X</span>
                     </Link>
                   </div>
+                  <div >
+              <Link href="https://www.youtube.com/channel/UCe3ROA7cvgieDp1wJGqD9LA" className="flex gap-3 items-center " >
+                <Image className="rounded-md" src="/logo/Youtube.svg" alt="me" width="33" height="33" />
+                <span>Youtube</span>
+              </Link>
+            </div>
                   
                 </div>
         </div>

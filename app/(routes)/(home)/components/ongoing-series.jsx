@@ -6,7 +6,7 @@ import { Separator } from "../../../../components/ui/separator";
 const OngoingSeries = ({data}) => {
 
     return (
-        <div className="mt-2">
+        <div className="mt-2 dark:text-black">
             <div className="flex justify-between">
                 <span className="ms-1 pt-3 text-sm font-medium">
                     Ongoing Series 

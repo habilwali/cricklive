@@ -44,7 +44,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className={` bg-[#022FF8] ${menuOpen ? 'h-auto pb-3' : "h-16"} lg:h-16  dark:bg-slate-700 border-b`}>
+    <div className={` bg-[#022FF8] ${menuOpen ? 'h-auto pb-3' : " h-16"} lg:h-16  dark:bg-slate-700 border-b`}>
       <div className="flex">
         <div className="lg:hidden text-white p-5">
           <Menu onClick={() => setMenuOpen(!menuOpen)} />
@@ -66,7 +66,10 @@ const Navbar = () => {
         }
       </div>
       <div className="flex lg:h-16  items-center container justify-between ">
-        <div className="rectangle16 w-[249.33px] h-[85px] relative opacity-100 p-0 rounded-[13.222223281860352px]" />
+      
+           <div className="lg:block hidden rectangle16 w-[249.33px] h-[85px] relative opacity-100 p-0 rounded-[13.222223281860352px]" />
+          
+       
         <div className="group5 w-[202.94px] h-[53.3px]  absolute p-0 lg:block hidden">
           <Link href='/'>
             <div className="flex items-center">

@@ -19,11 +19,10 @@ import getTopStories from "@/actions/get-top-stories";
 import { useQuery } from "@tanstack/react-query";
 import getUpcoming from "@/actions/get-upcoming";
 import Image from "next/image";
-
+import Link from "next/link";
 
 export default function Home() {
-  const [data, setData] = useState({});
-  const [isLoading, setLoading] = useState(true)
+
   const imageData = getImagesData();
   // const fetchData = async () => {
   //   try {
@@ -58,7 +57,7 @@ export default function Home() {
 // }
 );
 
-  console.log("liveScore",liveScore?.data?.typeMatches);
+
 
   if(liveScoreLoading){
     <div>loading</div>
@@ -107,9 +106,15 @@ export default function Home() {
               <TopStories data={topStories} />
               {/* <FeatureVideos /> */}
             </div>
-            <div className="lg:col-span-1 col-span-3">
+            <div className="lg:col-span-1 col-span-3 mt-1">
               <AddsPromotion />
-              <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="192" />
+              <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
+              <Link href="/ranking">
+              
+              <Image className="rounded-md mt-3 p-0 ms-0" src="/logo/Mens_Ranking.svg" alt="me" width="570" height="192" />
+              </Link>
+
+              <Image className="rounded-md mt-0 p-0 ms-0" src="/logo/Womens_Ranking.svg" alt="me" width="570" height="192" />
             </div>
           </div>
          

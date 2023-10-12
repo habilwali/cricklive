@@ -28,6 +28,7 @@ export function DataTable({
   columns,
   data,
   searchKey,
+  blue=false
 }) {
   const [columnFilters, setColumnFilters] = useState([]);
   const table = useReactTable({
@@ -60,12 +61,12 @@ export function DataTable({
      
       <div className="rounded-md ">
         <Table>
-          <TableHeader className="bg-[#E5E5E5] ">
+          <TableHeader className=  {`${blue? "bg-[#022FF8]": "bg-[#E5E5E5]"}  `}>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id}>
+                    <TableHead className= {`${blue && "  text-white"}`} key={header.id}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(

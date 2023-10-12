@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Matches from "../components/matches";
-import getUpcoming from "@/actions/get-upcoming";
+import Matches from "@/components/matches";
+
 import getRecent from "@/actions/get-recent";
 import RecentScoreCard from "@/components/recent-scoreCard";
 import FilterButtons from "@/components/filter";

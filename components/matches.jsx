@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader } from "../../../../components/ui/card";
-import { Separator } from "../../../../components/ui/separator";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardDescription, CardHeader } from "./ui/card";
+import { Separator } from "./ui/separator";
 import { format } from "date-fns";
 import { getImagesData } from "@/lib/localdata";
 import Image from "next/image";

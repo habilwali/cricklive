@@ -1,18 +1,10 @@
-import ScoreCard from "@/components/scoreCard";
-import Matches from "../components/matches";
+
+import Matches from "../../../../components/matches";
 import getUpcoming from "@/actions/get-upcoming";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import UpcomingScoreCard from "@/components/upcoming-scoreCard";
 import FilterButtons from "@/components/filter";
-const cards = [
-    { id: 1, title: 'Card 1', content: 'Super 4 match pak vs ind ' },
-    { id: 2, title: 'Card 2', content: 'Super 4 match pak vs ind ' },
-    { id: 3, title: 'Card 3', content: 'Super 4 match pak vs ind ' },
-    { id: 4, title: 'Card 4', content: 'Super 4 match pak vs ind ' },
-    { id: 5, title: 'Card 5', content: 'Super 4 match pak vs ind ' },
-
-];
-const UpcomingMatches = async () => {
+const Upcoming = async () => {
     const data = await getUpcoming({ matchType: "International" });
    
     
@@ -35,4 +27,4 @@ const UpcomingMatches = async () => {
     );
 }
 
-export default UpcomingMatches;
+export default Upcoming;

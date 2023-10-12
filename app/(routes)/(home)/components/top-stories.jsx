@@ -10,7 +10,7 @@ const TopStories = ({ data }) => {
     return (
         <div className="mt-2">
             <div className="flex justify-between">
-                <span className="ms-1 pt-3 text-sm font-medium">
+                <span className="ms-1 pt-3 dark:text-black text-sm font-medium">
                     Top Stories &#x1F525;
                 </span>
                 {/* <Button className="me-0 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button> */}
@@ -21,7 +21,7 @@ const TopStories = ({ data }) => {
                         <div className=" rounded-lg p-3">
                             <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topstories?.imageData}`} width={460} height={347} alt="img" />
                         </div>
-                        <div className="flex flex-col  items-center  justify-center " >
+                        <div className="flex flex-col dark:text-black  items-center  justify-center " >
 
                             <div className="lg:w-[441px]  lg:p-1 p-2 flex  flex-col ">
                                 <h2 className="text-2xl font-bold tracking-tight">{topstories?.hline}</h2>
@@ -31,51 +31,7 @@ const TopStories = ({ data }) => {
                                 </p>
                             </div>
                         </div>
-{/* 
-                        <div className=" flex p-2">
-                            <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img" />
-                            <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
-                                <h1 className=" font-medium text-sm   ">
-                                    Babar azam hints that Naseem shah is out of ODI world cup squard.
-                                </h1>
-                                <span className=" mt-3 text-[red]">
-                                    16 Sep 2023 11:04 PM
-                                </span>
-                            </div>
-                        </div>
-                        <div className=" flex p-2">
-                            <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img" />
-                            <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
-                                <h1 className=" font-medium text-sm   ">
-                                    Babar azam hints that Naseem shah is out of ODI world cup squard.
-                                </h1>
-                                <span className=" mt-3 text-[red]">
-                                    16 Sep 2023 11:04 PM
-                                </span>
-                            </div>
-                        </div>
-                        <div className=" flex p-2">
-                            <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img" />
-                            <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
-                                <h1 className=" font-medium text-sm   ">
-                                    Babar azam hints that Naseem shah is out of ODI world cup squard.
-                                </h1>
-                                <span className=" mt-3 text-[red]">
-                                    16 Sep 2023 11:04 PM
-                                </span>
-                            </div>
-                        </div>
-                        <div className=" flex p-2">
-                            <img className=" rounded-lg" src="https://e1.pxfuel.com/desktop-wallpaper/269/796/desktop-wallpaper-pakistan-cricket-team-icc-cricket-teams.jpg" width="188.35px" height="109.79px" alt="img" />
-                            <div className="lg:w-[441px] flex ps-3 flex-col  border-b-2">
-                                <h1 className=" font-medium text-sm   ">
-                                    Babar azam hints that Naseem shah is out of ODI world cup squard.
-                                </h1>
-                                <span className=" mt-3 text-[red]">
-                                    16 Sep 2023 11:04 PM
-                                </span>
-                            </div>
-                        </div> */}
+
 
                     </div>
                 ))
