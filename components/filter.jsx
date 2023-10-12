@@ -24,12 +24,7 @@ const FilterButtons = () => {
             label: 'Finished',
             active: pathname === `/finished`,
         },
-        {
-            href: `/favorite`,
-            label: 'Favorite',
-            active: pathname === `/favorite`,
-        },
-
+      
 
 
     ]
