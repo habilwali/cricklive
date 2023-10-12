@@ -10,7 +10,7 @@ const RankingPage = async () => {
         <div className="container">
             <div className="grid grid-cols-4 w-100">
 
-                <div className=" col-span-3">
+                <div className=" lg:col-span-3 col-span-4">
                     <div className='p-5 mb-0 '>
                         <h2 className="text-3xl font-bold tracking-tight">ICC Cricket Rankings - Men's Batting</h2>
                         <p className="text-sm text-muted-foreground">
@@ -22,7 +22,7 @@ const RankingPage = async () => {
                     </div>
                 </div>
 
-                <div className="lg:col-span-1 col-span-3">
+                <div className="lg:col-span-1 col-span-4">
                     <AddsPromotion />
                     <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
 
