@@ -12,8 +12,8 @@ export const rankingColumns = [
     accessorKey: "name",
     header: "Player",
     cell: ({ row }) => (
-            <div className=" text-red-500 gap-x-2 flex items-center justify-start p-0 m-0">
-                <Image className="rounded-md mt-0 p-0 ms-0" src="/logo/Profile_User.svg" alt="me" width="49" height="49" />
+            <div className=" text-blue-500 lg:text-base text-xs gap-x-2 flex items-center justify-start p-0 ms-0 me-5">
+                <Image className="rounded-md mt-0 p-0 ms-0" src="/logo/Profile_User.svg" alt="me" width="49" height="49"  />
               {row?.original?.name}
             </div>
           )

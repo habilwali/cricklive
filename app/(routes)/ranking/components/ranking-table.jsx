@@ -6,7 +6,7 @@ const RankingTable = ({data}) => {
     const blue = true;
     return ( 
        <div>
-        <Card className="p-0">
+        <Card className="p-0 m-0">
             <CardContent className="mt-0 p-0" >
             <DataTable columns={rankingColumns} blue={blue} data={data?.data?.rank} />
             </CardContent>
