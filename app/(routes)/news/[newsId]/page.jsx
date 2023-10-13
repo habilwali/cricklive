@@ -34,20 +34,20 @@ export default function NewsDetail() {
 
   return (
     <div className='container grid grid-cols-3 gap-2'>
-      <div className=' col-span-2' >
-        <div className='p-5 mb-0 '>
+      <div className=' lg:col-span-2 col-span-3 ' >
+        <div className='p-3 mb-0 '>
           <h2 className="text-3xl font-bold tracking-tight">{topStoryDetail?.data?.headline}</h2>
           <p className="text-sm text-muted-foreground">
             {topStoryDetail?.data?.context}
           </p>
         </div>
-        <div className=" rounded-lg p-3">
-          <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topStoryDetail?.data?.imageData}`} width={800} height={347} alt="img" />
+        <div className=" rounded-lg p-1">
+          <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topStoryDetail?.data?.imageData}`} width={870} height={347} alt="img" />
         </div>
 
         {
           topStoryDetail?.data?.content?.map((content, index) => (
-             <div  key={index} className='pt-5 w-[90%] ms-1 gap-4'>
+             <div  key={index} className='pt-4 pb-2 lg:pe-5 w-auto 0 gap-4'>
               <p className='mb-5  text-justify text-base font-normal font-[helvetica, "Segoe UI", Arial, sans-serif]  tracking-tight '>{content?.content?.contentValue}</p>
             </div>
 
@@ -60,7 +60,7 @@ export default function NewsDetail() {
 
       </div>
 
-      <div className=" col-span-1  rounded-md">
+      <div className=" lg:col-span-1 col-span-3  rounded-md">
                 <div className="mb-3 w-100">
                     <AddsPromotion />
                 </div>

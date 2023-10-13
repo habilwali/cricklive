@@ -8,7 +8,7 @@ function About() {
 
       <div className="grid grid-cols-6 gap-0">
 
-     <div className=' col-span-5'>
+     <div className=' lg:col-span-4 col-span-6'>
      <div className='pt-5 mb-0 '>
         <h2 className="text-3xl font-bold ">Welcome to SPORTSBIZZ Your Ultimate</h2>
         <p className="text-sm text-muted-foreground">
@@ -65,7 +65,7 @@ function About() {
           Stay Connected. Stay Informed. Stay Cricket Crazy! </p>
       </div>
      </div>
-     <div>
+     <div className='lg:col-span-2 col-span-6'>
       <AddsPromotion/>
       <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="192" />
      </div>
