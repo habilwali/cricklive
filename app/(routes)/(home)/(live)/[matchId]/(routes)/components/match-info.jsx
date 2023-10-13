@@ -6,7 +6,6 @@ import { format } from "date-fns";
 import Image from "next/image";
 
 const MatchBoard = ({ data, score }) => {
-    console.log("data info",data);
     const imageData = getImagesData();
     return (
         <div className="w-auto h-[228px] bg-[#022FF8] flex  justify-center items-center">

@@ -42,8 +42,6 @@ export default function Home() {
   //   const interval = setInterval(fetchData, 1000000); // Fetch data every 20 seconds
   //   return () => clearInterval(interval); // Cleanup interval on component unmount
   // }, []);
-
-  
   const { data: liveScore, error: liveScoreError, isLoading: liveScoreLoading } = useQuery(['liveScore'], async () => {
     try {
       const liveScore = await getLive({ matchType: 'International' });
@@ -57,12 +55,9 @@ export default function Home() {
 // }
 );
 
-
-
   if(liveScoreLoading){
     <div>loading</div>
   }
-
   const { data: topStories, error: topStoriesError, isLoading: topStoriesLoading } = useQuery(['topStories'], async () => {
     try {
       const topStories = await getTopStories();
@@ -109,7 +104,7 @@ export default function Home() {
             <div className="lg:col-span-1 col-span-3 mt-1">
               <AddsPromotion />
               <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
-              <Link href="/ranking">
+              <Link href="/ranking/batting">
               
               <Image className="rounded-md mt-3 p-0 ms-0" src="/logo/Mens_Ranking.svg" alt="me" width="570" height="192" />
               </Link>

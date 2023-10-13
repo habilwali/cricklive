@@ -59,9 +59,9 @@ export function DataTable({
       </div>
       }
      
-      <div className="rounded-md ">
+      <div className="rounded-md  ">
         <Table>
-          <TableHeader className=  {`${blue? "bg-[#022FF8]": "bg-[#E5E5E5]"}  `}>
+          <TableHeader className=  {`${blue? "bg-[#022FF8] lg:text-base text-xs lg": "bg-[#E5E5E5]"}  lg:text-base text-xs `}>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
@@ -79,15 +79,16 @@ export function DataTable({
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody>
+          <TableBody  >
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
+               
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell  key={cell.id}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 export const ScoreCardTable = ({ data }) => {
-console.log("data.bplwar", data?.bowler);
+  
   return (
     <>
       <Card className="mt-5 rounded-md w-100">

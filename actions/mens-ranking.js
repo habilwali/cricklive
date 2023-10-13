@@ -1,10 +1,10 @@
 
 
-const URL=`https://cricapp.bingerush.com/api/stats/get-icc-rankings/batsmen/odi/`;
+const URL=`https://cricapp.bingerush.com/api/stats/get-icc-rankings/`;
 
-const getMensRanking = async () => {
-  const res = await fetch(`${URL}`);
-
+const getMensRanking = async (query) => {
+  
+  const res = await fetch(`${URL}${query.matchType}`);
   return res.json();
 };
 

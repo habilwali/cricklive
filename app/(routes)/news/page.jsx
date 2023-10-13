@@ -19,7 +19,6 @@ export default function News() {
   });
 
 
-  console.log("topStories", topStories);
     return (
         <div className='container'>
           <Billboard data={topStories}/>

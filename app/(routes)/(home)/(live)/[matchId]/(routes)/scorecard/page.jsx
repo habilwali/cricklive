@@ -17,23 +17,15 @@ import MatchInfoSkeleton from "@/components/skeletonUi/match-info-skeleton";
 import ButtonSkeleton from "@/components/skeletonUi/button-skeleton";
 import CommentarySkeleton from "@/components/skeletonUi/commentarycardSkeleton";
 
-
-
-
-
 const ScoreCard = () => {
     const params = useParams();
-
     const matchId = params?.matchId;
-
     const { data: matchInfo, error: matchInfoError, isLoading: matchInfoLoading } = useQuery(['matchInfo', matchId], async () => {
         try {
             if (!matchId) {
                 throw new Error('Match ID is undefined.');
             }
-
             const playerScore = await getInfo(matchId);
-
             return playerScore;
         } catch (error) {
             throw new Error(`Error fetching player score: ${error.message}`);
@@ -45,9 +37,7 @@ const ScoreCard = () => {
             if (!matchId) {
                 throw new Error('Match ID is undefined.');
             }
-
             const playerScore = await getPlayerScore(matchId);
-
             return playerScore;
         } catch (error) {
             throw new Error(`Error fetching player score: ${error.message}`);
@@ -66,42 +56,33 @@ const ScoreCard = () => {
             throw new Error(`Error fetching player score: ${error.message}`);
         }
     },
-
         {
             refetchInterval: 6000
         }
     );
-
-   
-    if (matchInfoLoading || playerScoreLoading  ) {
-        return(
-            
-           <div >
-              <MatchInfoSkeleton/>
-              <ButtonSkeleton/>
-              <CommentarySkeleton/>
-              </div>
-          
-
-        ) 
+    if (matchInfoLoading || playerScoreLoading) {
+        return (
+            <div >
+                <MatchInfoSkeleton />
+                <ButtonSkeleton />
+                <CommentarySkeleton />
+            </div>
+        )
     }
 
     if (matchInfoError || playerScoreError) {
         return <div>Error: {matchInfoError ? matchInfoError.message : playerScoreError.message}</div>;
     }
 
-    console.log("playerScore",commentry);
-
     return (
         <div>
-            <MatchBoard data={matchInfo} score={commentry}/>
+            <MatchBoard data={matchInfo} score={commentry} />
             <div className="lg:container container-full">
                 <Tabs defaultValue="commentary" >
                     <TabsList className="mt-5 flex items-center gap-3 bg-transparent">
-                    <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="commentary">Commentary</TabsTrigger>
+                        <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="commentary">Commentary</TabsTrigger>
                         <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="scorecard">Scorecard</TabsTrigger>
                         <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="Squad">Squad</TabsTrigger>
-                        
                     </TabsList>
                     <TabsContent value="scorecard">
                         <div className="grid grid-cols-5 ">
@@ -121,15 +102,12 @@ const ScoreCard = () => {
                     <TabsContent value="Squad">
                         <Squads data={matchInfo} />
                     </TabsContent>
-
-
                     <TabsContent value="commentary">
-                       <Commentary data={commentry} />
+                        <Commentary data={commentry} />
                     </TabsContent>
                 </Tabs>
             </div>
         </div>
-
     );
 }
 

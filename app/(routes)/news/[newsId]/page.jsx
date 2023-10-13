@@ -31,7 +31,6 @@ export default function NewsDetail() {
     <div>Loading</div>
   }
 
-  console.log("topStoryDetail", topStoryDetail);
 
   return (
     <div className='container grid grid-cols-3 gap-2'>

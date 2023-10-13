@@ -9,7 +9,7 @@ export default function Billboard({ data }) {
     const params= useParams()
     const router = useRouter();
     const firstElement = data?.filter((_, index) => index === 0);
-    console.log("firstElement", firstElement);
+    
 
     const handleClick = (matchId) => {
         router.push(`news/${matchId}`);
