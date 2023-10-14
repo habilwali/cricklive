@@ -104,12 +104,13 @@ export default function Home() {
             <div className="lg:col-span-1 col-span-3 mt-1">
               <AddsPromotion />
               <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
-              <Link href="/ranking/batting">
+              <Link href="/man-ranking/batting">
               
               <Image className="rounded-md mt-3 p-0 ms-0" src="/logo/Mens_Ranking.svg" alt="me" width="570" height="192" />
               </Link>
-
+              <Link href="/women-ranking/batting">
               <Image className="rounded-md mt-0 p-0 ms-0" src="/logo/Womens_Ranking.svg" alt="me" width="570" height="192" />
+              </Link>
             </div>
           </div>
          

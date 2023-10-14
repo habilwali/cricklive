@@ -10,24 +10,24 @@ const RankingNavbar = () => {
     const params = useParams();
     const routes = [
         {
-            href: `/ranking/batting`,
+            href: `/man-ranking/batting`,
             label: 'Batting',
-            active: pathname === `/ranking/batting`,
+            active: pathname === `/man-ranking/batting`,
         },
         {
-            href: `/ranking/bowling`,
+            href: `/man-ranking/bowling`,
             label: 'Bowling',
-            active: pathname === `/ranking/bowling`,
+            active: pathname === `/man-ranking/bowling`,
         },
         {
-            href: `/ranking/all-rounders`,
+            href: `/man-ranking/all-rounders`,
             label: 'All Rounders',
-            active: pathname === `/ranking/all-rounders`,
+            active: pathname === `/man-ranking/all-rounders`,
         },
         {
-            href: `/ranking/teams`,
+            href: `/man-ranking/teams`,
             label: 'Teams',
-            active: pathname === `/ranking/teams`,
+            active: pathname === `/man-ranking/teams`,
         },
       
 

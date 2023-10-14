@@ -3,6 +3,7 @@ import { MiniScoreCard } from "./component/mini-score-card";
 import AddsPromotion from "@/components/adds";
 
 const Commentary = ({ data }) => {
+    console.log("commentry", data);
     return (
         <div className="grid grid-cols-3 gap-2">
             <div className=" lg:col-span-2 col-span-3">

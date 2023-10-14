@@ -29,13 +29,20 @@ const LiveCommentary = ({ data }) => {
                 <span>
                   Score after {convertToNextInteger(commentary?.overSeparator?.overNum)} over
                 </span>
-                <div className=" font-bold">
+                <div className=" font-bold gap-1">
                   <span>
-                    {commentary?.overSeparator?.batTeamName}
+                    {commentary?.overSeparator?.batTeamName } 
+
                   </span>
+                  
                   <span>
-                    {commentary?.overSeparator?.score}
+                     {commentary?.overSeparator?.score} 
                   </span>
+                  - <span>
+                    {commentary?.overSeparator?.wickets} 
+                  </span>
+                 
+                  
                 </div>
 
               </div>

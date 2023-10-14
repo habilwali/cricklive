@@ -1,6 +1,6 @@
 
 
-const URL=`https://www.cricbuzz.com/api/cricket-match/commentary`;
+const URL=`https://cricapp.bingerush.com/api/getMatchCommentary`;
 
 const getCommentary = async (id) => {
   const res = await fetch(`${URL}/${id}`);

@@ -1,6 +1,6 @@
 "use client"
 
-import { Menu } from "lucide-react";
+import { Cross, CrossIcon, Menu } from "lucide-react";
 import { MainNav } from "./main-nav";
 import { ThemeToggle } from "./theme-toggle";
 import { useState } from "react";
@@ -48,6 +48,7 @@ const Navbar = () => {
       <div className="flex">
         <div className="lg:hidden text-white p-5">
           <Menu onClick={() => setMenuOpen(!menuOpen)} />
+         
         </div>
         <Link href='/'>
           <div className="group5 w-[156.94px] h-[53.3px] absolute  ms-[50px] mt-1 flex text-center items-center sm:hidden ">

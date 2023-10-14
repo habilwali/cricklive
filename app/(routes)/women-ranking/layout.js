@@ -1,4 +1,4 @@
-import RankingNavbar from "@/components/raking-navbar";
+import RankingNavbar from "@/components/women-raking-navbar";
 
 export default function RankingLayout({
     children,
