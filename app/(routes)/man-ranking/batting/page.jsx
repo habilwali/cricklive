@@ -10,6 +10,8 @@ const Batting = async () => {
     const t20Data = await getMensRanking({ matchType: "batting/t20" });
     const testData = await getMensRanking({ matchType: "batting/test" });
 
+    console.log("odiData", odiData);
+
     return (
         <div className="lg:container lg:p-0  container-full p-1">
             <Tabs defaultValue="odi" >

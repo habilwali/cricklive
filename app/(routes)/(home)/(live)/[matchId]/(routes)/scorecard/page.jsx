@@ -16,6 +16,8 @@ import getCommentary from "@/actions/get-commentary";
 import MatchInfoSkeleton from "@/components/skeletonUi/match-info-skeleton";
 import ButtonSkeleton from "@/components/skeletonUi/button-skeleton";
 import CommentarySkeleton from "@/components/skeletonUi/commentarycardSkeleton";
+import SocialLinkSkeleton from "@/components/skeletonUi/social-links-skeleton";
+import getPointTable from "@/actions/get-point-table";
 
 const ScoreCard = () => {
     const params = useParams();
@@ -25,13 +27,33 @@ const ScoreCard = () => {
             if (!matchId) {
                 throw new Error('Match ID is undefined.');
             }
-            const playerScore = await getInfo(matchId);
-            return playerScore;
+            const matchInfo = await getInfo(matchId);
+            return matchInfo;
         } catch (error) {
             throw new Error(`Error fetching player score: ${error.message}`);
         }
     });
 
+
+    console.log("matchInfo", matchInfo?.data?.seriesId
+    );
+
+    const seriesId = matchInfo?.data?.seriesId;
+
+
+    const { data: pointTable, error: pointTableError, isLoading:pointTableLoading } = useQuery(['pointTable', seriesId], async () => {
+        try {
+            if (!seriesId) {
+                throw new Error('Series ID is undefined.');
+            }
+            const pointTable = await getPointTable(seriesId);
+            return pointTable;
+        } catch (error) {
+            throw new Error(`Error fetching player score: ${error.message}`);
+        }
+    });
+
+    console.log(pointTable);
     const { data: playerScore, error: playerScoreError, isLoading: playerScoreLoading } = useQuery(['playerScore', matchId], async () => {
         try {
             if (!matchId) {
@@ -60,12 +82,13 @@ const ScoreCard = () => {
             refetchInterval: 6000
         }
     );
-    if (matchInfoLoading || playerScoreLoading) {
+    const commentryLoadings = true
+    if (matchInfoLoading || playerScoreLoading || commentryLoading) {
         return (
             <div >
                 <MatchInfoSkeleton />
                 <ButtonSkeleton />
-                <CommentarySkeleton />
+               <CommentarySkeleton />
             </div>
         )
     }
@@ -103,7 +126,7 @@ const ScoreCard = () => {
                         <Squads data={matchInfo} />
                     </TabsContent>
                     <TabsContent value="commentary">
-                        <Commentary data={commentry} />
+                        <Commentary data={commentry} pointtable={pointTable}/>
                     </TabsContent>
                 </Tabs>
             </div>

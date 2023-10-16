@@ -12,7 +12,7 @@ const Finished = async() => {
   
     
     return ( 
-        <div className="container  px-6  ">
+        <div className="container  px-2  ">
                <FilterButtons/>
         <Tabs defaultValue="international" className=" mt-3">
             {/* <TabsList className=" flex justify-center bg-transparent">

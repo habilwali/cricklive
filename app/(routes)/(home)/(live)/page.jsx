@@ -20,6 +20,10 @@ import { useQuery } from "@tanstack/react-query";
 import getUpcoming from "@/actions/get-upcoming";
 import Image from "next/image";
 import Link from "next/link";
+import OngoingSeriesSkeleton from "@/components/skeletonUi/ongoing-series-skeleton";
+import TopStoriesSkeleton from "@/components/skeletonUi/top-stories-skeleton";
+import SocialLinkSkeleton from "@/components/skeletonUi/social-links-skeleton";
+import ButtonSkeleton from "@/components/skeletonUi/button-skeleton";
 
 export default function Home() {
 
@@ -50,14 +54,12 @@ export default function Home() {
       throw new Error(`Error fetching player score: ${error.message}`);
     }
   },
-//   {
-//     refetchInterval: 10000
-// }
-);
+    //   {
+    //     refetchInterval: 10000
+    // }
+  );
 
-  if(liveScoreLoading){
-    <div>loading</div>
-  }
+
   const { data: topStories, error: topStoriesError, isLoading: topStoriesLoading } = useQuery(['topStories'], async () => {
     try {
       const topStories = await getTopStories();
@@ -75,9 +77,32 @@ export default function Home() {
     }
   });
 
+
+ 
+  if (liveScoreLoading || onGoingSeriesLoading) {
+    return (
+      <div className="container  p-2 ">
+        <ButtonSkeleton />
+        <ScorecardSkeleton />
+        <OngoingSeriesSkeleton />
+        <div className="grid lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 col-span-3">
+          <TopStoriesSkeleton/>
+          </div>
+
+          <div className="lg:col-span-1 col-span-3 mt-1">
+          <SocialLinkSkeleton/>
+          </div>
+          
+        </div>
+
+      </div>
+    )
+  }
+
   return (
     <>
-      <div className="container  px-6  ">
+      <div className="container  px-2  ">
         <FilterButtons />
         <Tabs defaultValue="international" className="mt-3">
           {/* <TabsList className=" flex justify-center bg-transparent">
@@ -86,9 +111,7 @@ export default function Home() {
             <TabsTrigger value="domestic" className=" rounded-none" >Domestic</TabsTrigger>
             <TabsTrigger value="women" className=" rounded-none" >Women</TabsTrigger>
           </TabsList> */}
-          {liveScoreLoading &&
-            <ScorecardSkeleton />
-          }
+
           {
             liveScore ? (<ScoreCard data={liveScore?.data?.typeMatches} />) : (null)
           }
@@ -105,15 +128,15 @@ export default function Home() {
               <AddsPromotion />
               <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
               <Link href="/man-ranking/batting">
-              
-              <Image className="rounded-md mt-3 p-0 ms-0" src="/logo/Mens_Ranking.svg" alt="me" width="570" height="192" />
+
+                <Image className="rounded-md mt-3 p-0 ms-0" src="/logo/Mens_Ranking.svg" alt="me" width="570" height="192" />
               </Link>
               <Link href="/women-ranking/batting">
-              <Image className="rounded-md mt-0 p-0 ms-0" src="/logo/Womens_Ranking.svg" alt="me" width="570" height="192" />
+                <Image className="rounded-md mt-0 p-0 ms-0" src="/logo/Womens_Ranking.svg" alt="me" width="570" height="192" />
               </Link>
             </div>
           </div>
-         
+
         </Tabs>
       </div>
       {/* <div className="container mt-3 w-100 h-100">
