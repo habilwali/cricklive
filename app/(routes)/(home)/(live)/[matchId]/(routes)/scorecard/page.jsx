@@ -35,8 +35,7 @@ const ScoreCard = () => {
     });
 
 
-    console.log("matchInfo", matchInfo?.data?.seriesId
-    );
+
 
     const seriesId = matchInfo?.data?.seriesId;
 
@@ -53,7 +52,7 @@ const ScoreCard = () => {
         }
     });
 
-    console.log(pointTable);
+  
     const { data: playerScore, error: playerScoreError, isLoading: playerScoreLoading } = useQuery(['playerScore', matchId], async () => {
         try {
             if (!matchId) {

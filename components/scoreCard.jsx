@@ -31,7 +31,7 @@ const responsive = {
 };
 
 function ScoreCard({ data }) {
-    console.log("data",data);
+    
 
     const imageData = getImagesData();
     const router = useRouter();

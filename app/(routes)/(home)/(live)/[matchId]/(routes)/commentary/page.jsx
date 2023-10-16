@@ -5,7 +5,7 @@ import PointTable from "./component/point-table";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Commentary = ({ data, pointtable }) => {
-    console.log("commentry", pointtable);
+   
     return (
         <div className="grid grid-cols-3 gap-2">
             <div className=" lg:col-span-2 col-span-3">

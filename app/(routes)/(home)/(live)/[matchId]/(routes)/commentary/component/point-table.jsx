@@ -26,7 +26,7 @@ const PointTable = ({data}) => {
         <TableBody>
        {
         data?.pointsTableInfo?.map((pointsTableInfo, index)=>(
-            <TableRow >
+            <TableRow key={index} >
             <TableCell className="font-medium w-[200px]">{pointsTableInfo?.teamName} </TableCell>
             <TableCell className="font-medium ">{pointsTableInfo?.matchesPlayed}</TableCell>
             <TableCell className="font-medium ">{pointsTableInfo?.matchesWon}</TableCell>
