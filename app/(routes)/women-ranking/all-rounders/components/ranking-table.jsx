@@ -1,6 +1,7 @@
 import { DataTable } from "@/components/ui/data-table";
-import { rankingColumns } from "../../component/columns";
+
 import { Card, CardContent } from "@/components/ui/card";
+import { rankingColumns } from "@/components/ranking-columns";
 
 const RankingTable = ({data}) => {
     const blue = true;

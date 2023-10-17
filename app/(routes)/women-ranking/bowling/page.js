@@ -6,8 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Bowling = async () => {
 
-    const odiData = await getMensRanking({ matchType: "bowlers/odi/Women" });
-    const t20Data = await getMensRanking({ matchType: "bowlers/t20/Women" });
+    const odiData = await getMensRanking({ matchType: "bowlers/odi/women" });
+    const t20Data = await getMensRanking({ matchType: "bowlers/t20/women" });
 
     return (
         <div className="lg:container lg:p-0  container-full p-1">
