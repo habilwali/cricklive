@@ -64,7 +64,7 @@ export default function NewsDetail() {
                 <div className="mb-3 w-100">
                     <AddsPromotion />
                 </div>
-                <Image className="rounded-md" src="/images/sidebanner.webp" alt="me" width="460" height="702" />
+                <Image className="rounded-md" src="/images/Sidebanner.webp" alt="me" width="460" height="702" />
             </div>
 
 

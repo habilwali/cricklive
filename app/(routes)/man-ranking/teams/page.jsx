@@ -52,7 +52,7 @@ const Teams = async () => {
                     </div>
                     <div className="lg:col-span-1 col-span-4 lg:p-0 p-2">
                         <AddsPromotion />
-                        <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
+                        <Image className="rounded-md mt-5" src="/images/Cardbanner.webp" alt="me" width="442" height="392" />
                     </div>
                 </div>
             </Tabs>
