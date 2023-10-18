@@ -27,6 +27,10 @@ import ButtonSkeleton from "@/components/skeletonUi/button-skeleton";
 
 export default function Home() {
 
+
+  const loaderProp =({ src }) => {
+    return src;
+}
   const imageData = getImagesData();
   // const fetchData = async () => {
   //   try {
@@ -126,7 +130,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-1 col-span-3 mt-1">
               <AddsPromotion />
-              <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
+              <Image className="rounded-md mt-5" src="/images/cardbanner.webp" loader={loaderProp} alt="me" width="442" height="392" />
               <Link href="/man-ranking/batting">
 
                 <Image className="rounded-md mt-3 p-0 ms-0" src="/logo/Mens_Ranking.svg" alt="me" width="570" height="192" />
