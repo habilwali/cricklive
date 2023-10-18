@@ -3,6 +3,7 @@ import RankingTable from "./components/ranking-table";
 import AddsPromotion from "@/components/adds";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CardBanner from "@/components/card-bannner";
 
 const Batting = async () => {
 
@@ -53,7 +54,7 @@ const Batting = async () => {
                     </div>
                     <div className="lg:col-span-1 col-span-4 lg:p-0 p-2">
                         <AddsPromotion />
-                        <Image className="rounded-md mt-5" src="/images/cardbanner.webp" alt="me" width="442" height="392" />
+                        <CardBanner/>
                     </div>
                 </div>
             </Tabs>

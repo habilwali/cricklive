@@ -1,11 +1,10 @@
 import AddsPromotion from '@/components/adds'
+import CardBanner from '@/components/card-bannner';
 import Image from 'next/image'
 import React from 'react'
 
 function About() {
-  const loaderProp =({ src }) => {
-    return src;
-}
+
   return (
     <div className='container  font-[Satoshi]'>
 
@@ -70,8 +69,8 @@ function About() {
      </div>
      <div className='lg:col-span-2 col-span-6'>
       <AddsPromotion/>
-      <Image className="rounded-md mt-5" src="/images/cardbanner.webp" loader={loaderProp} alt="me" width="442" height="192" />
-     </div>
+      <CardBanner/>
+           </div>
      
     </div>
 

@@ -3,11 +3,10 @@ import RankingTable from "./components/ranking-table";
 import AddsPromotion from "@/components/adds";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CardBanner from "@/components/card-bannner";
 
 const Teams = async () => {
-    const loaderProp =({ src }) => {
-        return src;
-    }
+
     const odiData = await getMensRanking({ matchType: "teams/odi" });
     const t20Data = await getMensRanking({ matchType: "teams/t20" });
     const testData = await getMensRanking({ matchType: "teams/test" });
@@ -41,21 +40,20 @@ const Teams = async () => {
                             </div>
                         </TabsContent>
                         <TabsContent value="test">
-                        <div className='p-5 mb-0 '>
+                            <div className='p-5 mb-0 '>
                                 <h2 className="lg:text-3xl text-2xl font-bold tracking-tight">ICC Cricket Test Rankings - Men's Teams</h2>
                                 <p className="text-sm text-muted-foreground">
                                     {/* {topStoryDetail?.data?.context} */}
                                 </p>
                             </div>
                             <div className='p-2 mb-0  '>
-                            <RankingTable data={testData} />
+                                <RankingTable data={testData} />
                             </div>
                         </TabsContent>
                     </div>
                     <div className="lg:col-span-1 col-span-4 lg:p-0 p-2">
                         <AddsPromotion />
-                        <Image className="rounded-md mt-5" src="/images/cardbanner.webp" loader={loaderProp} alt="me" width="442" height="392" />
-                    </div>
+                        <CardBanner />                    </div>
                 </div>
             </Tabs>
         </div>
