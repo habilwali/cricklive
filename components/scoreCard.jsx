@@ -31,21 +31,18 @@ const responsive = {
 };
 
 function ScoreCard({ data }) {
-    
-
+    const loaderProp =({ src }) => {
+        return src;
+    }
     const imageData = getImagesData();
     const router = useRouter();
     const handleClick = (matchId) => {
         router.push(`/${matchId}/scorecard`);
     };
-
-   
     return (
-
         <div className="mt-5">
-
             {
-                data.length === 0 ? (<Image className=" rounded-xl  p-0 w-auto lg:h-auto h-[150px] " src="/images/Nolive.jpg" alt="me" width="1400" height="192" />): (<Carousel
+                data.length === 0 ? (<Image className=" rounded-xl  p-0 w-auto lg:h-auto h-[150px] " src="/images/nolive.jpg"  loader={loaderProp} alt="me" width="1400" height="192" />): (<Carousel
                     responsive={responsive}
                     autoPlay={false}
                     swipeable={false}

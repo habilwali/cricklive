@@ -12,6 +12,9 @@ import AddsPromotion from '@/components/adds'
 
 export default function NewsDetail() {
 
+  const loaderProp =({ src }) => {
+    return src;
+}
   const params = useParams()
 
   const { data: topStoryDetail, error: topStoryDetailError, isLoading: topStoryDetailLoading } = useQuery(['topStoryDetail'], async () => {
@@ -64,7 +67,7 @@ export default function NewsDetail() {
                 <div className="mb-3 w-100">
                     <AddsPromotion />
                 </div>
-                <Image className="rounded-md" src="/images/Sidebanner.webp" alt="me" width="460" height="702" />
+                <Image className="rounded-md" src="/images/Sidebanner.webp" loader={loaderProp} alt="me" width="460" height="702" />
             </div>
 
 
