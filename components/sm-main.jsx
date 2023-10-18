@@ -21,15 +21,18 @@ export function SMNAV({
       className={cn("grid grid-cols-2 gap-x-5 gap-y-3 mt-0 ", className)}
       {...props}
     >
-      {routes.map((route) => (
+      {routes.map((route, index) => (
+       
         <Link
-          key={route.href}
+
+          key={index}
           href={route.href}
           className={cn(
             'text-sm font-medium transition-colors hover:text-primary',
-            route.active ? ' font-extrabold text-md text-white dark:text-white' : ' text-white'
+            route.active ? ' font-extrabold text-md text-white' : ' text-white'
           )}
         >
+         
           {route.label}
       </Link>
       ))}

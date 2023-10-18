@@ -9,11 +9,11 @@ export const ScoreCardTable = ({ data }) => {
   return (
     <>
       <Card className="mt-5 rounded-md w-100">
-        <CardHeader className="bg-[#022FF8] rounded-sm text-white flex flex-row justify-between"  >
+        <CardHeader className="bg-[#022FF8] rounded-sm text-white flex flex-row justify-between "  >
           <CardTitle>{data?.batTeamName}</CardTitle>
           <CardTitle>{data?.score}-{data?.wickets} ({data?.overs})</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-1">
           <DataTable searchKey="name" columns={scorecolumns} data={data?.batsman} />
           <Separator />
           <div className="p-3">

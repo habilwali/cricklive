@@ -34,7 +34,7 @@ const LiveCommentary = ({ data }) => {
                     {commentary?.overSeparator?.batTeamName } 
 
                   </span>
-                  
+                  <span> </span>
                   <span>
                      {commentary?.overSeparator?.score} 
                   </span>
@@ -47,9 +47,11 @@ const LiveCommentary = ({ data }) => {
 
               </div>
               |
+              <div className="lg:block hidden  ">
+             
 
               <div className="flex flex-col items-center">
-
+           
                 <div className="flex justify-between">
                   <span className="w-15">
                     {commentary?.overSeparator?.batNonStrikerNames} :
@@ -67,8 +69,13 @@ const LiveCommentary = ({ data }) => {
                   </span>
                 </div>
               </div>
+              </div>
+              <div className="lg:block hidden">
               |
-              <div className="flex flex-col items-center">
+              </div>
+              <div className="lg:block hidden">
+             
+              <div className="flex flex-col items-center ">
                 <div className="flex flex-col items-center justify-between">
                   {
                     commentary?.overSeparator?.bowlNames?.map((bolname, index) => (
@@ -86,6 +93,7 @@ const LiveCommentary = ({ data }) => {
                 </div>
 
               </div>
+            </div>
             </div>
           }
 

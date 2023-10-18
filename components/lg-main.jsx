@@ -18,9 +18,9 @@ export function LGNav({
       className={cn("flex lg:flex-row sm:flex-col items-center space-x-4 lg:space-x-6", className)}
       {...props}
     >
-      {routes.map((route) => (
+      {routes.map((route, index) => (
         <Link
-          key={route.href}
+          key={index}
           href={route.href}
           className={cn(
             'text-sm font-medium transition-colors hover:text-red-300',

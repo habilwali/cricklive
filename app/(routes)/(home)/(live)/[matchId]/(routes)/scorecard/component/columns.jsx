@@ -11,7 +11,7 @@ export const scorecolumns = [
     accessorKey: "name",
     header: "Batter",
     cell: ({ row }) => (
-      <div className=" lg:w-auto w-[30px] p-0 m-0">
+      <div className=" lg:w-auto w-[30px]  p-0 m-0">
         {row?.original?.name}
       </div>
     )
@@ -29,22 +29,48 @@ export const scorecolumns = [
   {
     accessorKey: "runs",
     header: "R",
-  },
+    cell: ({ row }) => (
+      <div className=" text-xs lg:w-auto p-0 m-0">
+        {row?.original?.runs ? (row?.original?.runs) : (0)}
+      </div>
+    )
+},
+  
   {
     accessorKey: "balls",
     header: "B",
+    cell: ({ row }) => (
+      <div className=" text-xs lg:w-auto p-0 m-0">
+        {row?.original?.balls ? (row?.original?.balls) : (0)}
+      </div>
+    )
   },
   {
     accessorKey: "fours",
     header: "4s",
+    cell: ({ row }) => (
+      <div className=" text-xs lg:w-auto p-0 m-0">
+        {row?.original?.fours ? (row?.original?.fours) : (0)}
+      </div>
+    )
   },
   {
     accessorKey: "sixes",
     header: "6s",
+    cell: ({ row }) => (
+      <div className=" text-xs lg:w-auto p-0 m-0">
+        {row?.original?.sixes ? (row?.original?.sixes) : (0)}
+      </div>
+    )
   },
   {
     accessorKey: "strkRate",
     header: "SR",
+    cell: ({ row }) => (
+      <div className=" text-xs lg:w-auto p-0 m-0">
+        {row?.original?.strkRate}
+      </div>
+    )
   },
 
 ];

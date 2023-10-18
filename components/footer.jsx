@@ -4,11 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-
     <footer className="bg-[#0022BA] mt-5 dark:bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-2">
-
           <div className="group5 col-span-2 flex justify-center items-center text-center  relative p-0">
             <svg className="group4" width={103} height={111} viewBox="0 0 103 111" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M70.0346 29.9974H80.9288L33.8163 81.3556H21.1406L70.0346 29.9974Z" fill="#D9D9D9" fillOpacity="0.3" />
@@ -17,53 +15,43 @@ const Footer = () => {
             </svg>
             <span className="sCORECAST font-['Clash_Display'] text-[53.042476654052734px] font-medium text-neutral-100 text-center tracking-[0px]">SPORTSBIZZ</span>
           </div>
-
           <div className="group5 col-span-2   items-center text-start  relative p-1">
-
             <span className="sCORECAST font-['satoshi']  text-lg  font-bold  text-neutral-100 text-center tracking-[0px]">Quick Links</span>
-
           </div>
           <Separator className=" col-span-2" />
           <div>
-
             <ul className="text-white dark:text-gray-400 font-sm">
               <li className="mb-4">
-                <a href="#" className=" hover:underline">Matches</a>
+                <Link href="#" className=" hover:underline">Matches</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Offers</a>
+                <Link href="#" className="hover:underline">Offers</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Ranking</a>
+                <Link href="#" className="hover:underline">Ranking</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Competition</a>
+                <Link href="#" className="hover:underline">Competition</Link>
               </li>
             </ul>
-
           </div>
-
           <div>
-
             <ul className="text-white font-sm">
               <li className="mb-4">
-                <a href="#" className="hover:underline">News</a>
+                <Link href="/news" className="hover:underline">News</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Videos</a>
+                <Link href="#" className="hover:underline">Videos</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Stats</a>
+                <Link href="#" className="hover:underline">Stats</Link>
               </li>
 
             </ul>
           </div>
           <Separator className=" col-span-2" />
-
           <div className="group5 col-span-2   items-center text-start  relative p-0 mb-0">
-
             <span className="sCORECAST font-['satoshi']  text-lg  font-bold  text-neutral-100 text-center ">Follow SPORTSBIZZ</span>
-
           </div>
           <div className="flex m-0 col-span-2 ">
             <div className="ms-2" >
@@ -86,18 +74,12 @@ const Footer = () => {
                 <Image className="rounded-md" src="/logo/Youtube-2.svg" alt="me" width="60" height="60" />
               </Link>
             </div>
-
           </div>
-
           <div className=" col-span-2 text-center">
-            <span className="text-[#FFF] text-muted-foreground w-100">
+            <span className="text-[#FFFFFF] text-muted-foreground w-100">
               <Link href="">Terms of Use</Link> | <Link href="/about">About Us</Link> | <Link href="">Privacy Policy</Link> | <Link href="">Copyright 2023</Link>
             </span>
-
           </div>
-
-
-
         </div>
       </div>
     </footer>

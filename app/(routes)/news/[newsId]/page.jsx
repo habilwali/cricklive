@@ -36,10 +36,10 @@ export default function NewsDetail() {
 
 
   return (
-    <div className='container grid grid-cols-3 gap-2'>
+    <div className='lg:container grid grid-cols-3 gap-2 lg:p-0 p-3'>
       <div className=' lg:col-span-2 col-span-3 ' >
         <div className='p-3 mb-0 '>
-          <h2 className="text-3xl font-bold tracking-tight">{topStoryDetail?.data?.headline}</h2>
+          <h2 className="lg:text-3xl text-xl font-bold tracking-tight">{topStoryDetail?.data?.headline}</h2>
           <p className="text-sm text-muted-foreground">
             {topStoryDetail?.data?.context}
           </p>

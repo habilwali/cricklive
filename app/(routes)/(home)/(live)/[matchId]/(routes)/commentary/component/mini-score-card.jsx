@@ -11,12 +11,12 @@ export const MiniScoreCard = ({ data }) => {
     <>
       <Card className="mt-5 rounded-md p-2">
         <MiniScore data={data} />
-        <div className="grid lg:grid-cols-3 gap-4">
+        <div className="grid lg:grid-cols-3 lg:gap-4">
           <div className=" col-span-2">
           <MiniScoreTable data={data?.miniscore} />
          <MiniBowlerTable data={data?.miniscore} />
           </div>
-          <div className=" border-[#E5E5E5] ">
+          <div className=" border-[#E5E5E5] lg:col-span-1  col-span-3">
             <div className=" bg-[#E5E5E5] p-3 " >
                <h1>Key Stats</h1>
             </div>

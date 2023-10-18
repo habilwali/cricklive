@@ -99,7 +99,7 @@ const ScoreCard = () => {
     return (
         <div>
             <MatchBoard data={matchInfo} score={commentry} />
-            <div className="lg:container container-full">
+            <div className="lg:container ">
                 <Tabs defaultValue="commentary" >
                     <TabsList className="mt-5 flex items-center gap-3 bg-transparent">
                         <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="commentary">Commentary</TabsTrigger>

@@ -27,14 +27,14 @@ const Navbar = () => {
     },
     
     {
-      href: ``,
+      href: `/videos`,
       label: 'Videos',
-      active: pathname === ``,
+      active: pathname === `/videos`,
     },
     {
-      href: `/`,
+      href: `/offers`,
       label: 'Offers',
-      active: pathname === ``,
+      active: pathname === `/offers`,
     },
     {
       href: ``,

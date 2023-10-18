@@ -15,7 +15,7 @@ export function MiniScoreTable({data}) {
      
     <TableHeader className="bg-[#E5E5E5]">
       <TableRow>
-        <TableHead className="w-[100px]">Batter</TableHead>
+        <TableHead >Batter</TableHead>
         <TableHead>R</TableHead>
         <TableHead>B</TableHead>
         <TableHead >4s</TableHead>
@@ -26,7 +26,7 @@ export function MiniScoreTable({data}) {
     <TableBody>
     {data?.batsmanStriker?.batName ? (
         <TableRow >
-        <TableCell className="font-medium w-[200px]">{data?.batsmanStriker?.batName} <span className="text-[#911414]">*</span></TableCell>
+        <TableCell className="font-medium ">{data?.batsmanStriker?.batName} <span className="text-[#911414]">*</span></TableCell>
         <TableCell className="font-medium ">{data?.batsmanStriker?.batRuns}</TableCell>
         <TableCell className="font-medium ">{data?.batsmanStriker?.batBalls}</TableCell>
         <TableCell className="font-medium ">{data?.batsmanStriker?.batFours}</TableCell>
