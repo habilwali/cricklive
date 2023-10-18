@@ -33,7 +33,7 @@ const AddsPromotion = () => {
                   </div>
                   <div >
               <Link href="https://www.youtube.com/channel/UCe3ROA7cvgieDp1wJGqD9LA" className="flex gap-3 items-center " >
-                <Image className="rounded-md" src="/images/Youtube.svg" alt="me" width="33" height="33" />
+                <Image className="rounded-md" src="/images/You_tube.svg" alt="me" width="33" height="33" />
                 <span>Youtube</span>
               </Link>
             </div>
