@@ -4,6 +4,8 @@ import getUpcoming from "@/actions/get-upcoming";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import UpcomingScoreCard from "@/components/upcoming-scoreCard";
 import FilterButtons from "@/components/filter";
+export const revalidate = 0;
+
 const Upcoming = async () => {
     const data = await getUpcoming({ matchType: "International" });
    

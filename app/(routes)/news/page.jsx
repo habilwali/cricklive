@@ -20,7 +20,7 @@ export default function News() {
 
 
     return (
-        <div className='container'>
+        <div className='lg:container p-2'>
           <Billboard data={topStories}/>
           <Entertainment data={topStories}/>
         </div>
