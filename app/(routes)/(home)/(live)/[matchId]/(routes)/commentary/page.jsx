@@ -26,7 +26,7 @@ const Commentary = ({ data, pointtable }) => {
                 <div className="mb-3 w-auto">
                     <AddsPromotion />
                 </div>
-                <Image className="rounded-md" src="/images/Sidebanner.webp" alt="me" width="460" height="702" />
+                <Image className="rounded-md" src="/images/sidebanner.webp" alt="me" width="460" height="702" />
             </div>
         </div>
     );
