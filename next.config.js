@@ -1,11 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-    domains:['cricapp.bingerush.com',
-    'sportsbizz.com'
-  ]
+  reactStrictMode: true,
+  webp: {
+    preset: "default",
+    quality: 100,
+  },
+  images: {
     
-      },
+    domains: ['cricapp.bingerush.com',
+      'sportsbizz.com'
+    ],
+    
+
+  },
 }
 
 module.exports = nextConfig
