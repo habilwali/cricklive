@@ -18,11 +18,11 @@ const Matches = ({ data }) => {
                         </span>
                         {/* <Button className="me-2 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button> */}
                     </div>
-                    <div className="grid lg:grid-cols-2  rounded-md bg-white pb-0 mt-2 grid-cols-1 gap-2 sm:divide-y-0 divide-y-2 ">
+                    <div className="grid lg:grid-cols-2 lg:text-sm text-xs rounded-md bg-white pb-0 mt-2 grid-cols-1 gap-2 sm:divide-y-0 divide-y-2 ">
                         {matches.seriesMatches.matches.map((match, index) => (
                             <div className="ps-5 pe-5 m-0 " key={index}>
                                 <CardHeader className=" m-0 pb-0 pt-2  flex flex-row justify-between relative ">
-                                    <CardDescription className=" font-sans size-[14.68px] mt-2 font-medium ">{match.matchInfo.matchDesc} {match.matchInfo.seriesName} </CardDescription>
+                                    <CardDescription className=" font-sans lg:text-sm text-xs size-[14.68px] mt-2 font-medium ">{match.matchInfo.matchDesc} {match.matchInfo.seriesName} </CardDescription>
                                     <Star className="  top-1 right-0" />
                                 </CardHeader>
                                 <div className="m-3 flex justify-between items-center">

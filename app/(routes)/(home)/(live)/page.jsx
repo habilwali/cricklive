@@ -63,7 +63,6 @@ export default function Home() {
     // }
   );
 
-
   const { data: topStories, error: topStoriesError, isLoading: topStoriesLoading } = useQuery(['topStories'], async () => {
     try {
       const topStories = await getTopStories();
@@ -81,8 +80,6 @@ export default function Home() {
     }
   });
 
-
- 
   if (liveScoreLoading || onGoingSeriesLoading) {
     return (
       <div className="container  p-2 ">
@@ -96,10 +93,8 @@ export default function Home() {
 
           <div className="lg:col-span-1 col-span-3 mt-1">
           <SocialLinkSkeleton/>
-          </div>
-          
+          </div>          
         </div>
-
       </div>
     )
   }
@@ -140,7 +135,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-
         </Tabs>
       </div>
       {/* <div className="container mt-3 w-100 h-100">

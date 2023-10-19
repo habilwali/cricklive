@@ -9,7 +9,7 @@ const LiveCommentary = ({ data }) => {
         <div className=" p-2" key={index}>
           {
             commentary?.overSeparator &&
-            <div className="w-100 bg-slate-300 p-2  mb-3 text-sm rounded-md flex justify-around items-center">
+            <div className="w-100 bg-slate-300 p-2  mb-3 lg:text-sm text-xs rounded-md flex justify-around items-center">
               <span>
                 {convertToNextInteger(commentary?.overSeparator?.overNum)}
               </span>
@@ -52,7 +52,7 @@ const LiveCommentary = ({ data }) => {
 
               <div className="flex flex-col items-center">
            
-                <div className="flex justify-between">
+                <div className="flex justify-between ">
                   <span className="w-15">
                     {commentary?.overSeparator?.batNonStrikerNames} :
                   </span>
@@ -97,32 +97,10 @@ const LiveCommentary = ({ data }) => {
             </div>
           }
 
-          <div className="flex">
+          <div className="flex lg:text-sm text-xs">
             <span className="me-3 text-md font-bold">{commentary.overNumber}</span>
-            {/* <p className="text-sm">
-              {   
-                commentary?.commText.split(/(B\d\$|I\d\$)/).map((part, index) => {
-                  if (/^B\d\$/.test(part)) {
-                    const formatIndex = commentary.commentaryFormats.bold.formatId.indexOf(part);
-                    return (
-                      <strong key={index}>
-                        {commentary.commentaryFormats.bold.formatValue[formatIndex]}
-                      </strong>
-                    );
-                  } else if (/^I\d\$/.test(part)) {
-                    const formatIndex = commentary.commentaryFormats.italic.formatId.indexOf(part);
-                    return (
-                      <em key={index}>
-                        {commentary.commentaryFormats.italic.formatValue[formatIndex]}
-                      </em>
-                    );
-                  } 
-                  const value =addLineBreaks(part)
-                  return value;
-                })
-               }
-            </p> */}
-            <p className="text-sm">
+
+            <p className="lg:text-sm text-xs">
               {commentary?.commText.split(/(B\d\$|I\d\$)/).map((part, index) => {
                 if (/^B\d\$/.test(part)) {
                   const formatIndex = commentary.commentaryFormats.bold.formatId.indexOf(part);

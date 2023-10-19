@@ -31,7 +31,7 @@ const responsive = {
 };
 
 function ScoreCard({ data }) {
-    const loaderProp =({ src }) => {
+    const loaderProp = ({ src }) => {
         return src;
     }
     const imageData = getImagesData();
@@ -42,7 +42,7 @@ function ScoreCard({ data }) {
     return (
         <div className="mt-5">
             {
-                data.length === 0 ? (<Image className=" rounded-xl  p-0 w-auto lg:h-auto h-[150px] " src="/images/nolive.jpg"  loader={loaderProp} alt="me" width="1400" height="192" />): (<Carousel
+                data.length === 0 ? (<Image className=" rounded-xl  p-0 w-auto lg:h-auto h-[150px] " src="/images/nolive.jpg" loader={loaderProp} alt="me" width="1400" height="192" />) : (<Carousel
                     responsive={responsive}
                     autoPlay={false}
                     swipeable={false}
@@ -83,12 +83,10 @@ function ScoreCard({ data }) {
                                                 match?.matchScore?.team1Score &&
                                                 <div className="flex  mt-1 flex-col  lg:ms-4  ms-0  " >
                                                     <div>
-                                                        <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs} / </span>
-                                                        {
-                                                            match?.matchScore?.team1Score?.inngs1?.wickets ? (<span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets}</span>) : (<span className="  text-sm font-medium">0</span>)
-                                                        }
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs ? (match?.matchScore?.team1Score?.inngs1?.runs) : (0)} / </span>
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets ? (match?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
                                                     </div>
-                                                    <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team1Score?.inngs1?.overs)}</span>
+                                                    <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team1Score?.inngs1?.overs ? (match?.matchScore?.team1Score?.inngs1?.overs) : (0))}</span>
                                                 </div>
                                             }
                                         </div>
@@ -97,12 +95,10 @@ function ScoreCard({ data }) {
                                                 match?.matchScore?.team2Score &&
                                                 <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
                                                     <div>
-                                                        <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs}/</span>
-                                                        {
-                                                            match?.matchScore?.team2Score?.inngs1?.wickets ? (<span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.wickets}</span>) : (<span className="  text-sm font-medium">0</span>)
-                                                        }
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs ? (match?.matchScore?.team2Score?.inngs1?.runs) : (0)}/</span>
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.wickets ? (match?.matchScore?.team2Score?.inngs1?.wickets) : (0)}</span>
                                                     </div>
-                                                    <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team2Score?.inngs1?.overs)}</span>
+                                                    <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team2Score?.inngs1?.overs ? (match?.matchScore?.team2Score?.inngs1?.overs) : (0))}</span>
                                                 </div>
                                             }
                                             <div className=" flex justify-center items-center   flex-col">
@@ -120,7 +116,7 @@ function ScoreCard({ data }) {
                     }
                 </Carousel>)
             }
-            
+
         </div>
 
 

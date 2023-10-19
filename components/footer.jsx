@@ -28,10 +28,10 @@ const Footer = () => {
                 <Link href="#" className="hover:underline">Offers</Link>
               </li>
               <li className="mb-4">
-                <Link href="#" className="hover:underline">Ranking</Link>
+                <Link href="/man-ranking/batting" className="hover:underline">Mens Ranking</Link>
               </li>
               <li className="mb-4">
-                <Link href="#" className="hover:underline">Competition</Link>
+                <Link href="/women-ranking/batting" className="hover:underline">Women Ranking</Link>
               </li>
             </ul>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
                 <Link href="/news" className="hover:underline">News</Link>
               </li>
               <li className="mb-4">
-                <Link href="#" className="hover:underline">Videos</Link>
+                <Link href="/videos" className="hover:underline">Videos</Link>
               </li>
               <li className="mb-4">
                 <Link href="#" className="hover:underline">Stats</Link>
