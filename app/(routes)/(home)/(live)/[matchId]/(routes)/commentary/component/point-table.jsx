@@ -9,7 +9,7 @@ import {
 
 const PointTable = ({ data }) => {
   return (
-    <Table className="mb-3 ">
+    <Table className="mb-3 w-auto ">
       <TableHeader className="bg-[#E5E5E5] ">
         <TableRow className="lg:text-sm text-xs">
           <TableHead className="w-[100px]">Teams</TableHead>

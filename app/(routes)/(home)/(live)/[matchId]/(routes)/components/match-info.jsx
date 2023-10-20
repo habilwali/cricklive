@@ -50,15 +50,15 @@ const MatchBoard = ({ data, score }) => {
                 <div className="grid lg:grid-cols-3 grid-col-1 lg:p-5 pt-4 lg:text-sm text-xs w-100 gap-1  text-white  ">
                     <div className="flex ">
                         <span className="text-md font-bold flex">Series: </span>
-                        <p className="lg:text-sm text-xs ms-2 truncate lg:w-[290px] w-[290px] "> {data?.data?.seriesName}, {data?.data?.matchDesc}</p>
+                        <p className="text-sm ms-2 truncate lg:w-[290px] w-[290px] "> {data?.data?.seriesName}, {data?.data?.matchDesc}</p>
                     </div>
                     <div className="flex lg:justify-center">
                         <span className="text-md font-bold flex">Venue:</span>
-                        <p className="lg:text-sm text-xs  truncate lg:w-[350px] w-[290px] ms-2"> {data?.data?.venueInfo?.ground}, {data?.data?.venueInfo?.city}, {data?.data?.venueInfo?.country}</p>
+                        <p className="text-sm  truncate lg:w-[350px] w-[290px] ms-2"> {data?.data?.venueInfo?.ground}, {data?.data?.venueInfo?.city}, {data?.data?.venueInfo?.country}</p>
                     </div>
                     <div className="flex  lg:justify-end">
                         <span className="text-md font-bold text-end">Date & Time:  </span>
-                        <p className="lg:text-sm text-xs ms-2 "> {format(new Date(Number(data?.data?.startDate)), "dd/LL/yyyy hh:mm a")}</p>
+                        <p className="text-sm ms-2 "> {format(new Date(Number(data?.data?.startDate)), "dd/LL/yyyy hh:mm a")}</p>
                     </div>
                 </div>
             </div>

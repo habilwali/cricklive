@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           <Separator className=" col-span-2" />
           <div>
-            <ul className="text-white dark:text-gray-400 font-sm">
+            <ul className="text-white font-sm">
               <li className="mb-4">
                 <Link href="#" className=" hover:underline">Matches</Link>
               </li>
@@ -53,8 +53,8 @@ const Footer = () => {
           <div className="group5 col-span-2   items-center text-start  relative p-0 mb-0">
             <span className="sCORECAST font-['satoshi']  text-lg  font-bold  text-neutral-100 text-center ">Follow SPORTSBIZZ</span>
           </div>
-          <div className="flex m-0 col-span-2 ">
-            <div className="ms-2" >
+          <div className="flex m-0 col-span-2  ">
+            <div className="ms-2 " >
               <Link href="https://www.facebook.com/sportsbizzofficial " className="flex gap-3 items-center " >
                 <Image className="rounded-md" src="/logo/Facebook-2.svg" alt="me" width="60" height="60" />
               </Link>
@@ -76,15 +76,13 @@ const Footer = () => {
             </div>
           </div>
           <div className=" col-span-2 text-center">
-            <span className="text-[#FFFFFF] text-muted-foreground w-100">
+            <span className="text-[#FFFFFF]  w-100">
               <Link href="">Terms of Use</Link> | <Link href="/about">About Us</Link> | <Link href="">Privacy Policy</Link> | <Link href="">Copyright 2023</Link>
             </span>
           </div>
         </div>
       </div>
     </footer>
-
-
   );
 }
 

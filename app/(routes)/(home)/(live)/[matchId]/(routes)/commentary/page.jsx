@@ -10,7 +10,7 @@ const Commentary = ({ data, pointtable }) => {
         return src;
     }
     return (
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-2 ">
             <div className=" lg:col-span-2 col-span-3">
                 <MiniScoreCard data={data} />
             </div>
@@ -18,7 +18,7 @@ const Commentary = ({ data, pointtable }) => {
                 {
                     pointtable?.data?.pointsTable?.map((data, index) => (
                         <Card key={index} className="mt-5">
-                            <CardContent className="mt-2 p-0 ps-1 pe-1">
+                            <CardContent className="mt-2 p-0 ps-1 pe-1 ">
                                 <PointTable data={data} />
                             </CardContent>
                         </Card>

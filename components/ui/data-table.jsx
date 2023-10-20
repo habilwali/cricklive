@@ -22,8 +22,6 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-
-
 export function DataTable({
   columns,
   data,
@@ -58,7 +56,6 @@ export function DataTable({
         />
       </div>
       }
-     
       <div className="rounded-md  ">
         <Table>
           <TableHeader className=  {`${blue? "bg-[#022FF8] lg:text-base text-xs lg": "bg-[#E5E5E5]"}  lg:text-base text-xs `}>
