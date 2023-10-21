@@ -1,7 +1,7 @@
 import { convertToNextInteger } from "@/lib/utils";
 
 const OverSummery = ({commentary}) => {
-    console.log("commentary", commentary);
+  
     return ( 
         <div className="w-100 bg-slate-300 p-2  mb-3 text-sm  rounded-md flex justify-around items-center">
               <span>

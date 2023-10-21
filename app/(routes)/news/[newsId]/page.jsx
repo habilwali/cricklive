@@ -45,7 +45,7 @@ export default function NewsDetail() {
           </p>
         </div>
         <div className=" rounded-lg p-1">
-          <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topStoryDetail?.data?.imageData}`} width={870} height={347} alt="img" />
+          <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topStoryDetail?.data?.imageData}`} width={950} height={347} alt="img" />
         </div>
 
         {

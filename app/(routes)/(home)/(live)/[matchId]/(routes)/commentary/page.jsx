@@ -29,6 +29,8 @@ const Commentary = ({ data, pointtable }) => {
                 </div>
                 <Image className="rounded-md" src="/images/sidebanner.webp" loader={loaderProp} alt="me" width="460" height="702" />
             </div>
+
+           
         </div>
     );
 }

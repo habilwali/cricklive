@@ -18,6 +18,8 @@ import ButtonSkeleton from "@/components/skeletonUi/button-skeleton";
 import CommentarySkeleton from "@/components/skeletonUi/commentarycardSkeleton";
 import SocialLinkSkeleton from "@/components/skeletonUi/social-links-skeleton";
 import getPointTable from "@/actions/get-point-table";
+import AddsPromotion from "@/components/adds";
+import Image from "next/image";
 
 const ScoreCard = () => {
     const params = useParams();
@@ -96,6 +98,10 @@ const ScoreCard = () => {
         return <div>Error: {matchInfoError ? matchInfoError.message : playerScoreError.message}</div>;
     }
 
+    const loaderProp = ({ src }) => {
+        return src;
+    }
+
     return (
         <div>
             <MatchBoard data={matchInfo} score={commentry} />
@@ -107,8 +113,8 @@ const ScoreCard = () => {
                         <TabsTrigger className="h-10 bg-[#FFFFFF] text-black  px-4 py-2 text-sm font-medium transition-colors  rounded-md" value="Squad">Squad</TabsTrigger>
                     </TabsList>
                     <TabsContent value="scorecard">
-                        <div className="grid grid-cols-5 ">
-                            <div className=" lg:col-span-3 col-span-5">
+                        <div className="grid grid-cols-3 gap-3 ">
+                            <div className=" lg:col-span-2 col-span-3">
                                 {
                                     playerScore?.data?.scorecard?.map((score, index) => (
                                         <div className="" key={index}>
@@ -117,8 +123,13 @@ const ScoreCard = () => {
                                     ))
                                 }
                             </div>
-                            <div className="col-span-2">
-                            </div>
+                            <div className=" lg:col-span-1  col-span-3  rounded-md">
+               
+                <div className="mb-3 w-auto">
+                    <AddsPromotion />
+                </div>
+                <Image className="rounded-md" src="/images/sidebanner.webp" loader={loaderProp} alt="me" width="460" height="702" />
+            </div>
                         </div>
                     </TabsContent>
                     <TabsContent value="Squad">
