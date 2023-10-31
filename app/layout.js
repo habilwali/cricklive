@@ -21,9 +21,13 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <QueryClientProvider client={queryClient}>
-      <Navbar/>
+      
+        <Navbar/>
+       
+ 
     
         {children}
+      
         <Footer/>
         </QueryClientProvider>
         </ThemeProvider>
