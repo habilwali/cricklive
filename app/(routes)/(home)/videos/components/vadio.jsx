@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/
 import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
-const Vadios = ({ data }) => {
+const Video = ({ data }) => {
 
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
@@ -32,8 +32,8 @@ const Vadios = ({ data }) => {
                             <div key={index} className="">
                                 <div className="lg:w-[420.72px] h-[249.6px] ">
                                     <ReactPlayer
-                                        url={` http://192.168.50.36:5000/public/videos/${data?.video_url}`}
-                                        light={` http://192.168.50.36:5000/public/thumbnails/${data?.thumbnail_url}`}
+                                        url={` https://cricapp.bingerush.com/public/videos/${data?.video_url}`}
+                                        light={` https://cricapp.bingerush.com/public/thumbnails/${data?.thumbnail_url}`}
                                         playing
                                         width="100%"
                                         height="100%"
@@ -51,4 +51,4 @@ const Vadios = ({ data }) => {
     );
 }
 
-export default Vadios;
+export default Video;

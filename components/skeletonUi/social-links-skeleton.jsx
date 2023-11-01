@@ -4,7 +4,7 @@ import { Skeleton } from "../ui/skeleton";
 
 const SocialLinkSkeleton = () => {
   return (
-    <div className="dark:text-black">
+    <div className="text-black">
       <div className="flex justify-between">
         <span className="ms-1 pt-3 text-sm font-medium">
           <Skeleton className="h-4 w-[100px]" />

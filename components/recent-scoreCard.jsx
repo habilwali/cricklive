@@ -52,7 +52,7 @@ function RecentScoreCard({ data }) {
             // dotListClass="custom-dot-list-style"
             >
                 {data?.map((matches, index) => (
-                    <Card onClick={() => handleClick(matches?.matchInfo?.matchId)} key={index} className={`lg:w-[440.84px] hover:cursor-pointer font-[helvetica, "Segoe UI", Arial, sans-serif] lg:h-[192px] md:w-[340.84px]  w-auto  h-[182px] relative rounded-[12.23px] dark:bg-gray-800 ${index % 2 === 0 ? ' bg-[#022FF8] text-white' : null}`} >
+                    <Card onClick={() => handleClick(matches?.matchInfo?.matchId)} key={index} className={`lg:w-[440.84px] hover:cursor-pointer font-[helvetica, "Segoe UI", Arial, sans-serif] lg:h-[192px] md:w-[340.84px]  w-auto  h-[182px] relative rounded-[12.23px]  ${index % 2 === 0 ? ' bg-[#022FF8] text-white' : null}`} >
 
                         <svg className="group88  absolute top-0 bottom-0 " width={442} height={192} viewBox="0 0 442 172" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <ellipse className='lg:block hidden' cx="432.922" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />

@@ -6,10 +6,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CardBanner from "@/components/card-bannner";
 
 const Teams = async () => {
-  
+
     const odiData = await getMensRanking({ matchType: "teams/odi/women" });
     const t20Data = await getMensRanking({ matchType: "teams/t20/women" });
     return (
+
         <div className="lg:container lg:p-0  container-full p-1">
             <Tabs defaultValue="odi" >
                 <TabsList className="mt-5 flex items-center gap-5 bg-transparent">
@@ -22,9 +23,14 @@ const Teams = async () => {
                             <div className='p-5 mb-0 '>
                                 <h2 className="lg:text-3xl  text-2xl font-bold tracking-tight">ICC Cricket ODI Rankings - Women's Teams</h2>
                             </div>
-                            <div className='p-2 mb-0  '>
-                                <RankingTable data={odiData} />
-                            </div>
+                            {
+                                odiData.data === null  &&
+
+                                <div className='p-2 mb-0  '>
+                                    <RankingTable data={odiData} />
+                                </div>
+                            }
+
                         </TabsContent>
                         <TabsContent value="t20">
                             <div className='p-5 mb-0 '>
@@ -33,15 +39,19 @@ const Teams = async () => {
                                     {/* {topStoryDetail?.data?.context} */}
                                 </p>
                             </div>
-                            <div className='p-2 mb-0  '>
+                            {
+                                t20Data.data === null && 
+                                <div className='p-2 mb-0  '>
                                 <RankingTable data={t20Data} />
                             </div>
+                            }
+                            
                         </TabsContent>
-                      
+
                     </div>
                     <div className="lg:col-span-1 col-span-4 lg:p-0 p-2">
                         <AddsPromotion />
-                        <CardBanner/>
+                        <CardBanner />
                     </div>
                 </div>
             </Tabs>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const AddsPromotion = () => {
     return ( 
-        <div className="dark:text-black">
+        <div className="text-black">
              <div className="flex justify-between">
                 <span className="ms-1 pt-4 text-sm font-medium">
                     Follow us

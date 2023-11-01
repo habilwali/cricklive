@@ -16,7 +16,7 @@ const TopStoriesSkeleton = () => {
                         <div className=" rounded-lg p-3">
                         <Skeleton className="h-[250px] w-auto" />
                         </div>
-                        <div className="flex flex-col dark:text-black  items-center  justify-center " >
+                        <div className="flex flex-col  items-center  justify-center " >
                             <div className="lg:w-[441px]  lg:p-1 p-2  flex  flex-col ">
                             <Skeleton className="h-4 w-[300px] mb-3" />
                             <Skeleton className="h-4 w-[300px] mb-3" />

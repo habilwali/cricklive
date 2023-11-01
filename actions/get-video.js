@@ -1,4 +1,4 @@
-const URL=`http://192.168.50.36:5000/api/videos`;
+const URL=`https://cricapp.bingerush.com/api/videos`;
 
 const getVideo = async () => {
   

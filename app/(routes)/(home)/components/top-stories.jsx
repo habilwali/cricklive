@@ -16,7 +16,7 @@ const TopStories = ({ data }) => {
     return (
         <div className="mt-2">
             <div className="flex justify-between">
-                <span className="ms-1 pt-3 dark:text-black text-sm font-medium">
+                <span className="ms-1 pt-3 text-black text-sm font-medium">
                     Top Stories &#x1F525;
                 </span>
                 {/* <Button className="me-0 rounded-full bg-[#FFFFFF] text-black  hover:text-white">View More</Button> */}
@@ -27,7 +27,7 @@ const TopStories = ({ data }) => {
                         <div className=" rounded-lg p-3">
                             <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topstories?.imageData}`} width={460} height={347} alt="img" />
                         </div>
-                        <div className="flex flex-col dark:text-black  items-center  justify-center " >
+                        <div className="flex flex-col text-black  items-center  justify-center " >
 
                             <div className="lg:w-[441px]  lg:p-1 p-2 flex  flex-col ">
                                 <h2 className="text-2xl font-bold tracking-tight">{topstories?.hline}</h2>

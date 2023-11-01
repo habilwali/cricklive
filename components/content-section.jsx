@@ -17,7 +17,7 @@ function ContentSection() {
                 </Card>
             </div>
 
-            <Card className='row-span-6 col-span-3  w-auto  bg-white  dark:bg-gray-800 rounded-md shadow p-1'>
+            <Card className='row-span-6 col-span-3  w-auto  bg-white  rounded-md shadow p-1'>
 
                 <ReactPlayer url='https://youtu.be/WQdqgrWvy6g?si=QyHyiLejOf6_uA2R' className="rounded-md" width="100%" />
 

@@ -86,7 +86,7 @@ export function MainNav({ className, ...props }) {
               href={route.href}
               className={cn(
                 'block mt-4 text-sm font-medium transition-colors hover:text-primary',
-                route.active ? 'text-black dark:text-white' : 'text-white'
+                route.active ? 'text-black ' : 'text-white'
               )}
             >
               {route.label}
