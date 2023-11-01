@@ -6,7 +6,7 @@ const Videos = async () => {
 const data =  await getVideo()
     return (
     
-        <div className=" lg:container w-100 p-1  mt-2 flex   ">
+        <div className=" lg:container  p-1  mt-2   ">
             <Video data={data} />
         </div>
     );

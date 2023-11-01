@@ -50,7 +50,7 @@ function ScoreCard({ data }) {
                     showDots={true}
                     infinite={true}
                     partialVisible={false}
-                    className={`w-[100%] h-[230px] ${ data.length < 3 ? 'flex justify-center' : " "}  `}
+                    className={`w-[100%] h-[230px] ${ data.length < 3 ? 'lg:flex lg:justify-center lg:items-center' : " "}  `}
                 // dotListClass="custom-dot-list-style"
                 >
                     {
