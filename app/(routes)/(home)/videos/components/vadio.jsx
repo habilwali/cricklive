@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
 const Video = ({ data }) => {
-
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
         setMounted(true);
@@ -22,7 +21,6 @@ const Video = ({ data }) => {
             <Card>
                 <CardHeader>
                     <CardDescription>Entertantment</CardDescription>
-
                 </CardHeader>
                 <CardContent className="grid  lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 ">
                     {

@@ -1,6 +1,6 @@
 import getVideo from "@/actions/get-video";
 import Video from "./components/vadio";
-
+export const revalidate = 0;
 const Videos = async () => {
 
 const data =  await getVideo()
