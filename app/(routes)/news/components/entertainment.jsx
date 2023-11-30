@@ -14,7 +14,7 @@ export default function Entertainment({data}) {
             {
                data?.filter((_, index) => index !== 0).map((list, index)=>(
                     <div onClick={() => handleClick(list?.id)} key={index} className=" rounded-lg lg:p-3 p-2 cursor-pointer ">
-                    <Image className=" rounded-lg h-[300px]" src={`https://cricapp.bingerush.com/${list?.imageData}`} width={460} height={347} alt="img" />
+                    <Image className=" rounded-lg h-[300px]" src={`${process.env.imageUrl}/${list?.imageData}`} width={460} height={347} alt="img" />
                     <div className="text-neutral-700 text-lg font-medium font-['Satoshi']">{list?.hline}</div>
                 </div>
                 ))

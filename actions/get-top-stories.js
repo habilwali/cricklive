@@ -1,6 +1,6 @@
 
 
-const URL=`https://cricapp.bingerush.com/api/stories/list`;
+const URL=`${process.env.baseUrl}stories/list`;
 
 const getTopStories = async () => {
   const res = await fetch(`${URL}`);

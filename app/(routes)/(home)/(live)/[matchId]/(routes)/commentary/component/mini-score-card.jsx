@@ -8,6 +8,8 @@ import KeyStats from "./key-stats";
 
 export const MiniScoreCard = ({ data }) => {
 
+  
+
   return (
     <>
       <Card className="mt-5 rounded-md p-2  relative">

@@ -24,7 +24,6 @@ export function MiniBowlerTable({data}) {
         </TableRow>
       </TableHeader>
       <TableBody>
-     
           <TableRow className="lg:text-sm text-xs " >
             <TableCell className="font-medium ">{data?.bowlerStriker?.bowlName} <span className="text-[#911414]">*</span></TableCell>
             <TableCell className="font-medium ">{data?.bowlerStriker?.bowlOvs}</TableCell>
@@ -43,9 +42,5 @@ export function MiniBowlerTable({data}) {
           </TableRow>
       </TableBody>
     </Table>
-
-
-
-   
   )
 }
