@@ -9,7 +9,6 @@ const Teams = async () => {
 
     const odiData = await getMensRanking({ matchType: "teams/odi/women" });
     const t20Data = await getMensRanking({ matchType: "teams/t20/women" });
-
     return (
 
         <div className="lg:container lg:p-0  container-full p-1">
@@ -25,7 +24,7 @@ const Teams = async () => {
                                 <h2 className="lg:text-3xl  text-2xl font-bold tracking-tight">ICC Cricket ODI Rankings - Women's Teams</h2>
                             </div>
                             {
-                                odiData?.data !== null  &&
+                                odiData.data === null  &&
 
                                 <div className='p-2 mb-0  '>
                                     <RankingTable data={odiData} />
@@ -41,7 +40,7 @@ const Teams = async () => {
                                 </p>
                             </div>
                             {
-                                t20Data.data !== null && 
+                                t20Data.data === null && 
                                 <div className='p-2 mb-0  '>
                                 <RankingTable data={t20Data} />
                             </div>

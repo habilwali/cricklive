@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { rankingTeamsColumns } from "@/components/ranking-columns";
 
 const RankingTable = ({data}) => {
-   
     const blue = true;
     return ( 
        <div>

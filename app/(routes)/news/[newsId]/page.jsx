@@ -27,7 +27,7 @@ export default function NewsDetail() {
   },
 
     {
-      staleTime: 0, // Set the stale time to 60 seconds (1 minute)
+      staleTime: 1, // Set the stale time to 60 seconds (1 minute)
     });
 
   if (topStoryDetailLoading) {
@@ -45,7 +45,7 @@ export default function NewsDetail() {
           </p>
         </div>
         <div className=" rounded-lg p-1">
-          <Image className=" rounded-lg" src={`${process.env.imageUrl}/${topStoryDetail?.data?.imageData}`} width={950} height={347} alt="img" />
+          <Image className=" rounded-lg" src={`https://cricapp.bingerush.com/${topStoryDetail?.data?.imageData}`} width={950} height={347} alt="img" />
         </div>
 
         {

@@ -1,11 +1,12 @@
 "use client"
 
-import { Card, CardContent, CardDescription, CardHeader,  } from './ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {  Star } from "lucide-react";
-
+import { LogIn, Star } from "lucide-react";
+import ReactConfetti from "react-confetti";
+import Contifier from './contifier';
 import { getImagesData } from '@/lib/localdata';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -49,7 +50,7 @@ function ScoreCard({ data }) {
                     showDots={true}
                     infinite={true}
                     partialVisible={false}
-                    className={`w-[100%] h-[230px] ${data.length < 3 ? 'lg:flex lg:justify-center lg:items-center' : " "}  `}
+                    className={`w-[100%] h-[230px] ${ data.length < 3 ? 'lg:flex lg:justify-center lg:items-center' : " "}  `}
                 // dotListClass="custom-dot-list-style"
                 >
                     {
@@ -62,7 +63,10 @@ function ScoreCard({ data }) {
                                         <ellipse className='lg:block hidden' cx="4.8918" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />
                                         <ellipse className='lg:hidden' cx="-28.7918" cy="91.4894" rx="106.396" ry="106.128" fill="#D9D9D9" fillOpacity="0.1" />
                                     </svg>
-                                    
+                                    {/* {
+                                index === 1 &&
+                                <Contifier />
+                            } */}
                                     <CardHeader className=" m-0 pt-2 relative gap-2 ">
                                         <CardDescription className={`text-center  lg:ms-[46px]  size-[14.68px] font-medium lg:truncate lg:w-[280px] ${index % 2 === 0 ? '  bg-transparent text-white' : null}`}>{match?.matchInfo?.seriesName} </CardDescription>
                                         <Star className=" absolute top-0 right-3" />
@@ -76,66 +80,26 @@ function ScoreCard({ data }) {
                                                 <h1 className='lg:w-[100px] w-[80px] text-center lg:text-sm text-xs mt-3 '>{match.matchInfo.team1.teamSName}</h1>
                                             </div>
                                             {
-                                                match?.matchScore?.team1Score.inngs2 ? (
-                                                    <div className='flex'>
-                                                        <div>
-                                                            <div>
-                                                                <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs ? (match?.matchScore?.team1Score?.inngs1?.runs) : (0)}/</span>
-                                                                <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets ? (match?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
-                                                            </div>
-                                                            <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team1Score?.inngs1?.overs ? (match?.matchScore?.team1Score?.inngs1?.overs) : (0))}</span>
-                                                        </div>
-                                                        <span className='ps-1 pe-1'>&</span>
-
-                                                        <div>
-                                                            <div>
-                                                                <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs2?.runs ? (match?.matchScore?.team1Score?.inngs2?.runs) : (0)}/</span>
-                                                                <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs2?.wickets ? (match?.matchScore?.team1Score?.inngs2?.wickets) : (0)}</span>
-                                                            </div>
-                                                            <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team1Score?.inngs2?.overs ? (match?.matchScore?.team1Score?.inngs2?.overs) : (0))}</span>
-                                                        </div>
+                                                match?.matchScore?.team1Score &&
+                                                <div className="flex  mt-1 flex-col  lg:ms-4  ms-0  " >
+                                                    <div>
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs ? (match?.matchScore?.team1Score?.inngs1?.runs) : (0)} / </span>
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets ? (match?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
                                                     </div>
-                                                ) :
-                                                    match?.matchScore?.team1Score ? (<div className="flex  mt-1 flex-col  lg:ms-4  ms-0  " >
-                                                        <div>
-                                                            <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.runs ? (match?.matchScore?.team1Score?.inngs1?.runs) : (0)}/</span>
-                                                            <span className="  text-sm font-medium">{match?.matchScore?.team1Score?.inngs1?.wickets ? (match?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
-                                                        </div>
-                                                        <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team1Score?.inngs1?.overs ? (match?.matchScore?.team1Score?.inngs1?.overs) : (0))}</span>
-                                                    </div>) : null
-
+                                                    <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team1Score?.inngs1?.overs ? (match?.matchScore?.team1Score?.inngs1?.overs) : (0))}</span>
+                                                </div>
                                             }
                                         </div>
                                         <div className="flex  justify-between">
                                             {
-                                                match?.matchScore?.team2Score?.inngs2 ?
-                                                    (
-                                                        <div>
-                                                            <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
-                                                                <div>
-                                                                    <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs ? (match?.matchScore?.team2Score?.inngs1?.runs) : (0)}/</span>
-                                                                    <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.wickets ? (match?.matchScore?.team2Score?.inngs1?.wickets) : (0)}</span>
-                                                                </div>
-                                                                <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team2Score?.inngs1?.overs ? (match?.matchScore?.team2Score?.inngs1?.overs) : (0))}</span>
-                                                            </div>
-                                                            &
-                                                            <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
-                                                                <div>
-                                                                    <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs2?.runs ? (match?.matchScore?.team2Score?.inngs2?.runs) : (0)}/</span>
-                                                                    <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs2?.wickets ? (match?.matchScore?.team2Score?.inngs2?.wickets) : (0)}</span>
-                                                                </div>
-                                                                <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team2Score?.inngs2?.overs ? (match?.matchScore?.team2Score?.inngs2?.overs) : (0))}</span>
-                                                            </div>
-                                                        </div>
-                                                    ) :
-                                                    match?.matchScore?.team2Score ?
-                                                        (<div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
-                                                            <div>
-                                                                <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs ? (match?.matchScore?.team2Score?.inngs1?.runs) : (0)}/</span>
-                                                                <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.wickets ? (match?.matchScore?.team2Score?.inngs1?.wickets) : (0)}</span>
-                                                            </div>
-                                                            <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team2Score?.inngs1?.overs ? (match?.matchScore?.team2Score?.inngs1?.overs) : (0))}</span>
-                                                        </div>) : null
+                                                match?.matchScore?.team2Score &&
+                                                <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
+                                                    <div>
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.runs ? (match?.matchScore?.team2Score?.inngs1?.runs) : (0)}/</span>
+                                                        <span className="  text-sm font-medium">{match?.matchScore?.team2Score?.inngs1?.wickets ? (match?.matchScore?.team2Score?.inngs1?.wickets) : (0)}</span>
+                                                    </div>
+                                                    <span className="  text-xs text-center font-normal">{convertToNextInteger(match?.matchScore?.team2Score?.inngs1?.overs ? (match?.matchScore?.team2Score?.inngs1?.overs) : (0))}</span>
+                                                </div>
                                             }
                                             <div className=" flex justify-center items-center   flex-col">
                                                 <div className=" bg-yellow-300 w-[47.48px] h-[47.48px] rounded-full flex justify-center items-center">
@@ -145,7 +109,7 @@ function ScoreCard({ data }) {
                                             </div>
                                         </div>
                                     </CardContent>
-                                    <h3 className=" absolute bottom-2 top lg:left-[100px] left-[70px]  text-sm font-normal   truncate w-[250px] ">{match?.matchInfo?.status}</h3>
+                                    <h3 className=" absolute bottom-2 top lg:left-[125px] left-[70px]  text-sm font-normal   truncate w-[230px] ">{match?.matchInfo?.status}</h3>
                                 </Card>
                             </>
                         ))

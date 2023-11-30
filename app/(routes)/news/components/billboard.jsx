@@ -20,7 +20,7 @@ export default function Billboard({ data }) {
         <div className="pt-3 pb-3 lg:p-0 lg:pt-8 lg:pb-8 rounded-xl overflow-hidden ">
             {
                 firstElement?.map((data, index) => (
-                    <div key={index} style={{ backgroundImage: `url(${process.env.imageUrl}/${data?.imageData})` }} className="rounded-xl bg-center relative aspect-square  md:aspect-[2.4/1]   overflow-hidden bg-cover bg-start    ">
+                    <div key={index} style={{ backgroundImage: `url(https://cricapp.bingerush.com/${data?.imageData})` }} className="rounded-xl bg-center relative aspect-square  md:aspect-[2.4/1]   overflow-hidden bg-cover bg-start    ">
       
                         <div className="h-full w-full flex flex-col  justify-end pb-2 p-3 items-start text-center gap-y-8">
                             <div className='flex  lg:justify-between lg:flex-row  flex-col  w-full items-center'>

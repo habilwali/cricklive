@@ -34,18 +34,18 @@ const Navbar = () => {
       Icon:<VideotapeIcon/>,
       active: pathname === `/videos`,
     },
-    // {
-    //   href: `/offers`,
-    //   label: 'Offers',
-    //   Icon:<CircleDot/>,
-    //   active: pathname === `/offers`,
-    // },
-    // {
-    //   href: ``,
-    //   label: 'Competition',
-    //   Icon:< CircleDashed/>,
-    //   active: pathname === ``,
-    // },
+    {
+      href: `/offers`,
+      label: 'Offers',
+      Icon:<CircleDot/>,
+      active: pathname === `/offers`,
+    },
+    {
+      href: ``,
+      label: 'Competition',
+      Icon:< CircleDashed/>,
+      active: pathname === ``,
+    },
   ]
 
   const handleState = () => {
