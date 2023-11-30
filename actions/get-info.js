@@ -1,6 +1,6 @@
 
 
-const URL=`${process.env.baseUrl}matches/get-info`;
+const URL=`https://cricapp.bingerush.com/api/matches/get-info`;
 
 const getInfo = async (id) => {
   const res = await fetch(`${URL}/${id}`);

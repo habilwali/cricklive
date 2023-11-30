@@ -28,8 +28,8 @@ const Video = ({ data }) => {
                             <div key={index} className="">
                                 <div className="lg:w-[420.72px] h-[249.6px] ">
                                     <ReactPlayer
-                                        url={`${process.env.imageUrl}/public/videos/${data?.video_url}`}
-                                        light={`${process.env.imageUrl}/public/thumbnails/${data?.thumbnail_url}`}
+                                        url={` https://cricapp.bingerush.com/public/videos/${data?.video_url}`}
+                                        light={` https://cricapp.bingerush.com/public/thumbnails/${data?.thumbnail_url}`}
                                         playing
                                         width="100%"
                                         height="100%"

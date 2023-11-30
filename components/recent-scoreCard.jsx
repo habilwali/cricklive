@@ -77,51 +77,20 @@ function RecentScoreCard({ data }) {
                                     <h1 className='lg:w-[100px] w-[80px] text-center lg:text-sm text-xs mt-3 '>{matches.matchInfo.team1.teamSName}</h1>
                                 </div>
                                 {
-                                    matches?.matchScore?.team1Score?.inngs2 ?
-                                        (<div className='flex'>
-                                            <div className="flex  mt-1 flex-col  lg:ms-2  ms-0 " >
-                                                <span className=" text-sm font-medium">{matches?.matchScore?.team1Score?.inngs1?.runs ? (matches?.matchScore?.team1Score?.inngs1?.runs) : (0)}/{matches?.matchScore?.team1Score?.inngs1?.wickets ? (matches?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
-                                                <span className=" text-xs text-center font-normal">{matches?.matchScore?.team1Score?.inngs1?.overs ? (matches?.matchScore?.team1Score?.inngs1?.overs) : (0)}</span>
-                                            </div>
-                                            <span className='ps-1 '>&</span>
-                                            <div className="flex  mt-1 flex-col  lg:ms-2  ms-0 " >
-                                                <span className=" text-sm font-medium">{matches?.matchScore?.team1Score?.inngs2?.runs ? (matches?.matchScore?.team1Score?.inngs2?.runs) : (0)}/{matches?.matchScore?.team1Score?.inngs2?.wickets ? (matches?.matchScore?.team1Score?.inngs2?.wickets) : (0)}</span>
-                                                <span className=" text-xs text-center font-normal">{matches?.matchScore?.team1Score?.inngs2?.overs ? (matches?.matchScore?.team1Score?.inngs2?.overs) : (0)}</span>
-                                            </div>
-                                        </div>
-                                        ) :
-                                        matches?.matchScore?.team1Score ?
-                                            (
-                                                <div className="flex  mt-1 flex-col  lg:ms-4  ms-0 " >
-                                                    <span className=" text-sm font-medium">{matches?.matchScore?.team1Score?.inngs1?.runs ? (matches?.matchScore?.team1Score?.inngs1?.runs) : (0)}/{matches?.matchScore?.team1Score?.inngs1?.wickets ? (matches?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
-                                                    <span className=" text-xs text-center font-normal">{matches?.matchScore?.team1Score?.inngs1?.overs ? (matches?.matchScore?.team1Score?.inngs1?.overs) : (0)}</span>
-                                                </div>
-
-                                            ) : null
+                                    matches?.matchScore?.team1Score &&
+                                    <div className="flex  mt-1 flex-col  lg:ms-4  ms-0 " >
+                                        <span className=" text-sm font-medium">{matches?.matchScore?.team1Score?.inngs1?.runs ? (matches?.matchScore?.team1Score?.inngs1?.runs) : (0)}/{matches?.matchScore?.team1Score?.inngs1?.wickets ? (matches?.matchScore?.team1Score?.inngs1?.wickets) : (0)}</span>
+                                        <span className=" text-xs text-center font-normal">{matches?.matchScore?.team1Score?.inngs1?.overs ? (matches?.matchScore?.team1Score?.inngs1?.overs) : (0)}</span>
+                                    </div>
                                 }
                             </div>
                             <div className="flex  justify-between">
                                 {
-                                    matches?.matchScore?.team2Score.inngs2 ?
-                                        (
-                                            <div className='flex'>
-                                        
-                                        <div className="flex  mt-5 flex-col " >
+                                    matches?.matchScore?.team2Score &&
+                                    <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
                                         <span className=" text-sm font-medium">{matches?.matchScore?.team2Score?.inngs1?.runs ? (matches?.matchScore?.team2Score?.inngs1?.runs) : (0)}/{matches?.matchScore?.team2Score?.inngs1?.wickets ? (matches?.matchScore?.team2Score?.inngs1?.wickets) : (0)}</span>
                                         <span className=" text-xs text-center font-normal">{matches?.matchScore?.team2Score?.inngs1?.overs ? (matches?.matchScore?.team2Score?.inngs1?.overs) : (0)}</span>
                                     </div>
-                                    <span className='ps-1 pe-1  mt-5'>&</span>
-                                    <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
-                                        <span className=" text-sm font-medium">{matches?.matchScore?.team2Score?.inngs2?.runs ? (matches?.matchScore?.team2Score?.inngs2?.runs) : (0)}/{matches?.matchScore?.team2Score?.inngs2?.wickets ? (matches?.matchScore?.team2Score?.inngs2?.wickets) : (0)}</span>
-                                        <span className=" text-xs text-center font-normal">{matches?.matchScore?.team2Score?.inngs2?.overs ? (matches?.matchScore?.team2Score?.inngs2?.overs) : (0)}</span>
-                                    </div>
-                                    </div>) :
-                                        matches?.matchScore?.team2Score ? (
-                                            <div className="flex  mt-5 flex-col  lg:me-4  me-2 " >
-                                                <span className=" text-sm font-medium">{matches?.matchScore?.team2Score?.inngs1?.runs ? (matches?.matchScore?.team2Score?.inngs1?.runs) : (0)}/{matches?.matchScore?.team2Score?.inngs1?.wickets ? (matches?.matchScore?.team2Score?.inngs1?.wickets) : (0)}</span>
-                                                <span className=" text-xs text-center font-normal">{matches?.matchScore?.team2Score?.inngs1?.overs ? (matches?.matchScore?.team2Score?.inngs1?.overs) : (0)}</span>
-                                            </div>
-                                        ) : null
                                 }
                                 <div className=" flex justify-center items-center   flex-col">
                                     <div className=" bg-yellow-300 w-[47.48px] h-[47.48px] rounded-full flex justify-center items-center">
@@ -131,7 +100,7 @@ function RecentScoreCard({ data }) {
                                 </div>
                             </div>
                         </CardContent>
-                        <h3 className=" absolute bottom-2 top lg:left-[110px] left-[60px]  text-sm font-normal   truncate w-[230px] ">{matches?.matchInfo?.status}</h3>
+                        <h3 className=" absolute bottom-2 top lg:left-[125px] left-[60px]  text-sm font-normal   truncate w-[230px] ">{matches?.matchInfo?.status}</h3>
                     </Card>
                 ))}
             </Carousel>

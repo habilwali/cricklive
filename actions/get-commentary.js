@@ -1,6 +1,6 @@
 
 
-const URL=`${process.env.baseUrl}getMatchCommentary`;
+const URL=`https://cricapp.bingerush.com/api/getMatchCommentary`;
 
 const getCommentary = async (id) => {
   const res = await fetch(`${URL}/${id}`);

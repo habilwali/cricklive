@@ -1,7 +1,7 @@
 
 import qs from "query-string";
 
-const URL=`${process.env.baseUrl}matches/list/recent`;
+const URL=`https://cricapp.bingerush.com/api/matches/list/recent`;
 
 const getRecent = async (query) => {
   const url = qs.stringifyUrl({
