@@ -2,7 +2,7 @@
 import create from 'zustand';
 import qs from 'query-string';
 
-const URL = 'https://cricapp.bingerush.com/api/matches/list/upcoming';
+const URL = '${process.env.baseUrl}matches/list/upcoming';
 
 const useUpcomingMatchesStore = create((set) => ({
   upcomingMatches: null,
