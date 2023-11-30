@@ -23,7 +23,7 @@ const AllRounder = async () => {
                     <div className=" lg:col-span-3 col-span-4">
                         <TabsContent value="odi">
                             <div className='p-5 mb-0 '>
-                                <h2 className="lg:text-3xl  text-2xl font-bold tracking-tight">ICC Cricket ODI Rankings - Men's Bowling</h2>
+                                <h2 className="lg:text-3xl  text-2xl font-bold tracking-tight">ICC Cricket ODI Rankings - Men's All Rounder</h2>
                             </div>
                             <div className='p-2 mb-0  '>
                                 <RankingTable data={odiData} />
@@ -31,7 +31,7 @@ const AllRounder = async () => {
                         </TabsContent>
                         <TabsContent value="t20">
                             <div className='p-5 mb-0 '>
-                                <h2 className="lg:text-3xl text-2xl font-bold tracking-tight">ICC Cricket T20 Rankings - Men's Bowling</h2>
+                                <h2 className="lg:text-3xl text-2xl font-bold tracking-tight">ICC Cricket T20 Rankings - Men's All Rounder</h2>
                                 <p className="text-sm text-muted-foreground">
                                     {/* {topStoryDetail?.data?.context} */}
                                 </p>
@@ -42,7 +42,7 @@ const AllRounder = async () => {
                         </TabsContent>
                         <TabsContent value="test">
                         <div className='p-5 mb-0 '>
-                                <h2 className="lg:text-3xl text-2xl font-bold tracking-tight">ICC Cricket Test Rankings - Men's Bowling</h2>
+                                <h2 className="lg:text-3xl text-2xl font-bold tracking-tight">ICC Cricket Test Rankings - Men's All Rounder</h2>
                                 <p className="text-sm text-muted-foreground">
                                     {/* {topStoryDetail?.data?.context} */}
                                 </p>

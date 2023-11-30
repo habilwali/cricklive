@@ -1,9 +1,9 @@
-const URL=`https://cricapp.bingerush.com/api/videos`;
+const URL=`${process.env.baseUrl}videos`;
 
 const getVideo = async () => {
-  
-  const res = await fetch(`${URL}`);
 
+  const res = await fetch(`${URL}`);
+  
   return res.json();
 };
 

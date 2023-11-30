@@ -4,11 +4,11 @@ import AddsPromotion from "@/components/adds";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CardBanner from "@/components/card-bannner";
-
+export const revalidate = 0
 const Batting = async () => {
    
-    const odiData = await getMensRanking({ matchType: "batting/odi/women" });
-    const t20Data = await getMensRanking({ matchType: "batting/t20/women" });
+    const odiData = await getMensRanking({ matchType: "batsmen/odi/women" });
+    const t20Data = await getMensRanking({ matchType: "batsmen/t20/women" });
    
 
     return (
